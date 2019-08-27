@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>HIIK GAME</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/header_login.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./libs/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="./libs/et-line/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/tab_menu.js"></script>
+    <script>
+      $(document).ready( function() {
+        $( '.select_lang' ).click( function() {
+          $( '.lang_list' ).toggle( 'fast' );
+            return false;
+        });
+      });
+      $(document).ready( function() {
+        $( '.my_point ul li:nth-of-type(3)' ).click( function() {
+          $( '.log_out' ).toggle( 'fast' );
+            return false;
+        });
+      });
+    </script>
+</head>
+<body>
+    <header>
+       <div class="header_wrap">
+            <h1 class="logo">
+                <a href="index_login.html"><img src="./img/logo_h.png" alt=""></a>
+            </h1>
+            <div class="left_nav">
+                <ul>
+                    <li><a href="index_login.html">게임</a></li>
+                    <li><a href="mypage.html">지갑</a></li>
+                    <li><a href="qna.html">공지사항</a></li>
+                </ul>
+            </div>
+            <div class="select_lang">
+                <img src="./img/ko.png" alt="">
+                    한국어
+            </div>
+            <!-- 2019-08-12 수정:S -->
+            <div class="lang_list">
+                <ul>
+                    <li><span><img src="./img/ko.png" alt=""></span><b>한국어</b></li>
+                    <li><span><img src="./img/cn.png" alt=""></span><b>中文</b></li>
+                    <li><span><img src="./img/en.png" alt=""></span><b>English</b></li>
+                    <li><span><img src="./img/jp.png" alt=""></span><b>日本語</b></li>
+                    <li><span><img src="./img/ru.png" alt=""></span><b>Русский</b></li>
+                    <li><span><img src="./img/th.png" alt=""></span><b>ภาษาไทย</b></li>
+                    <li><span><img src="./img/vi.png" alt=""></span><b>tiếng Việt</b></li>
+                    <li><span><img src="./img/km.png" alt=""></span><b>ភាសាខ្មែរ</b></li>
+                    <li><span><img src="./img/es.png" alt=""></span><b>Español</b></li>
+                    <li><span><img src="./img/de.png" alt=""></span><b>Deutsch</b></li>
+                    <li><span><img src="./img/fr.png" alt=""></span><b>français</b></li>
+                    <li><span><img src="./img/pt.png" alt=""></span><b>Português</b></li>
+                    <li><span><img src="./img/ar.png" alt=""></span><b>العربية</b></li>
+                    <li><span><img src="./img/it.png" alt=""></span><b>italiano</b></li>
+                    <li><span><img src="./img/id.png" alt=""></span><b>Orang indonesia</b></li>
+                </ul>
+            </div>
+            <!-- 2019-08-12 수정:E -->
+            <div class="my_point">
+                <ul>
+                    <li>
+                        <p>Game balance</p>
+                        <p>0 COIN</p>
+                    </li>
+                    <li>
+                        <p>Ethereum</p>
+                        <p>0.000 ETH</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-tag"></i>
+                        <p>0x901B244</p>
+                    </li>
+                </ul>
+                <div class="log_out">
+                    <ul>
+                        <li><a href="mypage.html">상세보기</a></li>
+                        <li><a href="index.html">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="visual">
+        <div class="jackpot">
+            <p class="jac_txt">
+                <span class="jac_text">PROGRESSIVE JACKPOT</span><em class="jac_num">$ 104,248,895,944</em>
+            </p>
+        </div>
+    </div>
+    <div id="content">
+        <div class="list_wrap">
+            <ul>
+                <li class="game_list">
+                    <h3>COIN FLIP</h3>
+                    <a href="game_1.html"><img src="./img/game_coinflip.png" alt=""></a>
+                    <p>JACKPOT</p>
+                    <p>$4,254,209</p>
+                </li>
+                <li class="game_list">
+                    <h3>UP DOWN</h3>
+                    <a href="game_2.html"><img src="./img/game_updown.png" alt=""></a>
+                    <p>JACKPOT</p>
+                    <p>$4,534,546</p>
+                </li>
+                <li class="game_list">
+                    <h3>CUPS &amp; BALL</h3>
+                    <a href="game_3.html"><img src="./img/game_cups.png" alt=""></a>
+                    <p>JACKPOT</p>
+                    <p>$59,694</p>
+                </li>
+                <li class="game_list">
+                    <h3>GUESS</h3>
+                    <a href="game_4.html"><img src="./img/game_guess.png" alt=""></a>
+                    <p>JACKPOT</p>
+                    <p>$5,678,334</p>
+                </li>
+                <li class="game_list">
+                    <h3>SEQUENCE</h3>
+                    <a href="sequence_room.html"><img src="./img/game_sequence2.png" alt=""></a>
+                    <p>JACKPOT</p>
+                    <p>$2,948,594</p>
+                </li>
+            </ul>
+        </div><!--   list_wrap     -->
+        <p class="vis_txt">
+            <strong>Blockchain</strong>을 통해 투명하고 공정한 게임 플랫폼을 만듭니다.<br>보상은 정해진 규칙대로 정확하게 배분되어지며, <strong>Smart contract</strong>를 기반으로 배분됩니다.
+        </p>
+    </div><!-- content 끝   -->
+    
+    <footer>
+        <div class="footer_wrap">
+            <div class="copy_wrap">
+               <!-- 2019-08-12 수정:S -->
+               <p class="copy">Copyright &copy; 2019 HIIK &nbsp;All rights reserved.</p>
+               <p class="help">HELP : help@hiikgame.com</p>
+               <!-- 2019-08-12 수정:E -->
+            </div>
+        </div>
+    </footer>
+    <script  src="js/jac_text.js"></script>
+</body>
+</html>

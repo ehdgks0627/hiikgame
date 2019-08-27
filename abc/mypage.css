@@ -1,0 +1,913 @@
+body{
+    overflow-x: hidden;
+    background: url(../img/game_bg.png) no-repeat;
+    color: #fff !important;
+}
+#content{width: 100%; height: auto;}
+.content_wrap{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+nav{
+    width: 100%;
+    height: 40px;
+}
+nav ul{
+    height: 100%;
+}
+         
+nav ul li{
+    float: left;
+    line-height: 40px;
+    width: 20%;
+    text-align: center;
+    background-color: #442e02;
+    background-image: linear-gradient(360deg, #442e02 0%, #ca9b3f 74%);
+    text-shadow: 1px 1px 1px #222;
+}
+         
+nav ul li:nth-of-type(1){
+    border-top-left-radius: 10px;
+}
+nav ul li:nth-of-type(5){
+    border-right:0;
+    border-top-right-radius: 10px;
+}
+nav ul li a{
+    color: #fff;
+    font-weight: bold;
+    display: block;
+}
+.orange{
+    color: #ee9a07;
+}
+.tab{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 5px;
+    height: 728px;
+}
+.nav_buttons{
+    text-align: center;
+    margin-top: 30px;
+}
+.nav_buttons button{
+    border: 0;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+}
+.nav_buttons .nav_page_btn{
+    width: 20px;
+}
+
+
+.tab1{
+    display: block;
+}
+/* 2019 08 20 수정:S */
+.tab1 .inner_box{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+/* 2019 08 20 수정:E */
+.tab2, .tab3, .tab4, .tab5{
+    display: none;
+}
+.tab1 .point_box h2,.tab1 .hiik_box h2{
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 0;
+    border-bottom: 1px solid #5c5c5c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 16px;
+    text-shadow: 2px 2px 2px #5c5c5c;
+}
+.tab1 .point_box h2{
+    background: url(../img/point_ico.png) no-repeat #000;
+    background-size: 25px;
+    background-position: 190px center;
+}
+.tab1 .hiik_box h2{
+    background: url(../img/hiik_ico.png) no-repeat #000;
+    background-size: 25px;
+    background-position: 200px center;
+}
+/* 2019 08 20 수정:S */
+.point_box{
+    height: 280px;
+    flex: 5;
+    margin-right: 100px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #5c5c5c;
+    background: url(../img/box_bg_3.png) no-repeat;
+    background-position: center center;
+}
+.point_box .point_view {
+    width: 65%;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+    text-shadow: 2px 2px 2px #000;
+    text-align: center;
+}
+/* 2019 08 20 수정:E */
+.point_view p{
+    display: inline-block;
+    margin-right: 40px;
+}
+.point_view .my_p{
+    display: inline-block;
+    font-size: 23px;
+}
+.charge_btn{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40%;
+    bottom: 25px;
+}
+.hiik_change{}
+.charge_btn p{
+    width: 40%;
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    margin-right: 20%;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: #442e02;
+    background-image: linear-gradient(350deg, #442e02 0%, #ca9b3f 74%);
+    color: #fff;
+    text-shadow: 2px 2px 2px #5c5c5c;
+    border-radius: 10px;
+}
+.charge_btn p:nth-of-type(2){
+    margin-right: 0;
+}
+.charge_btn p i{
+    font-size: 16px;
+}
+.charge_btn p span{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+}
+/* 2019 08 20 수정:S */
+.hiik_box{
+    height: 280px;
+    flex: 5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #5c5c5c;
+    background: url(../img/box_bg_3.png) no-repeat;
+    background-position: center center;
+}
+.hiik_box h2{}
+.hiik_box .hiik_view {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 16px;
+}
+/* 2019 08 20 수정:E */
+.hiik_view ul{}
+
+.hiik_view ul li{
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+}
+.hiik_view ul li p{
+    font-weight: bold;
+    flex: 5;
+}
+.hiik_box .my_h,.my_min,.my_accu{
+    font-weight: bold;
+    flex: 5;
+}
+
+/* 2019 08 20 수정:S */
+.tab1_info{
+    margin-top: 20px;
+    border: 1px dashed #fff;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.tab1_info h2{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.tab1_info h3{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.tab1_info p{
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #9adbd9;
+    text-shadow: 2px 2px 2px #000;
+}
+.hiik_infoWrap{
+    display: flex;
+    justify-content: space-between;
+}
+.hiik_infoWrap .info1{}
+.hiik_infoWrap .info2{}
+.info3{
+    margin-top: 20px;
+}
+/* 2019 08 20 수정:E */
+
+
+.tab2{}
+.tab2 h2{
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.log_table{
+    display: none;
+}
+.log1{
+    display: block;
+}
+
+.tab2 table{
+    width: 100%;
+    text-align: center;
+    border-spacing: 0px;
+}
+.tab2 table tr{
+    height: 35px;
+}
+.tab2 table td{
+    border-bottom: 1px solid #ccc;
+}
+.tab2 table thead{}
+.tab2 table thead tr{
+    height: 35px;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    font-size: 13px;
+}
+.logTab_box{}
+.logTab_box ul{
+    width: 60%;
+    display: flex;
+    margin-top: 20px;
+}
+.logTab_box ul li{
+    background: rgba(255,255,255,0.8);
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #787878;
+    border-right: 1px solid #787878;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.li_bgcolor{
+    background-color: #2b4162;
+    background-image: linear-gradient(360deg, #2b4162 0%, #12100e 74%);
+    color: #fff !important;
+    text-shadow: 2px 2px 2px #222;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 1px solid #e2e2e2;
+}
+.logTab_box ul li:nth-of-type(1){
+    flex: 2.5;
+}
+.logTab_box ul li:nth-of-type(2){
+    flex: 2.5;
+}
+.logTab_box ul li:nth-of-type(3){
+    flex: 2.5;
+}
+.logTab_box ul li:nth-of-type(4){
+    flex: 2.5;
+    border-right: none;
+}
+.logTab_box ul li a{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.tab3{}
+.tab3 h2{
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.tab3 .tab3_info{
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    text-indent: 10px;
+    line-height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.tab3 .tab3_info img{
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.tab3 .tab3_info p{
+    font-weight: bold;
+}
+.tab3 ul{
+    margin-bottom: 40px;
+}
+.tab3 ul li{
+    height: 60px;
+    line-height: 60px;
+    border: 1px dotted #ccc;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.tab3 ul li:nth-of-type(6){
+    border-bottom: 1px dotted #ccc;
+}
+.tab3 ul li p{
+    float: left;
+    width: 140px;
+    font-weight: bold;
+}
+.tab3 ul li input{
+    width: 220px;
+    height: 25px;
+    border: 1px solid #8c650c;
+}
+.tab3 ul li input::placeholder{
+    text-indent: 2px;
+    font-size: 11px;
+}
+.tab3 ul li span{
+    font-size: 12px;
+    margin-left: 10px;
+}
+.tab3 ul li .otp_btn{
+    display: inline-block;
+    margin-left: 20px;
+}
+.tab3 ul li .otp_btn a{
+    color: #ee9a07;
+}
+.tab3 .edit{
+    text-align: center;
+    width: 220px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #442e02;
+    background-image: linear-gradient(350deg, #442e02 0%, #ca9b3f 74%);
+    border-radius: 5px;
+    text-shadow: 2px 2px 2px #5c5c5c;
+}
+.tab4{}
+.tab4 h2{
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.tab4 .tab4_info{
+    width: 95%;
+    margin: 20px auto;
+    height: 60px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.tab4 .tab4_info img{
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+}
+.tab4 table{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    border-spacing: 0px;
+}
+.tab4 table tr{
+    height: 35px;
+}
+.tab4 table td{
+    border-bottom: 1px solid #ccc;
+}
+.tab4 table thead{}
+.tab4 table thead tr{
+    height: 35px;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    font-size: 13px;
+}
+.tab5{}
+.tab5 h2{
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.tab5 table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    border-spacing: 0px;
+}
+.tab5 table tr{
+    height: 35px;
+}
+.tab5 table td{
+    border-bottom: 1px solid #ccc;
+}
+.tab5 table thead{}
+.tab5 table thead tr{
+    height: 35px;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    font-size: 13px;
+}
+.footer_wrap .copy_wrap p{
+    color: #fff;
+}
+@media screen and (min-width: 1280px) and (max-width: 1599px){}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    .content_wrap {
+        width: 95%;
+    }
+                
+    .tab1 .point_box h2 {
+        background-position: 140px center;
+    }
+    .tab1 .hiik_box h2 {
+        background-position: 145px center;
+    }
+    .point_box .point_view {
+        width: 80%;
+        font-size: 17px;
+    }
+    .hiik_box .hiik_view {
+        width: 80%;
+    }
+    /* 2019 08 20 수정:S */
+    .tab1_info p {
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #9adbd9;
+    }
+    /* 2019 08 20 수정:E */
+}
+@media screen and (min-width: 780px) and (max-width: 1023px){
+    .content_wrap {
+        width: 95%;
+    }
+    .tab1 ul li input{
+        width: 170px;
+    }
+    .inner_box{
+        flex-direction: column;
+        height: 640px;
+        margin-top: 20px !important;
+    }
+    .tab1 .point_box h2 {
+        background-position: 280px center;
+    }
+    .tab1 .hiik_box h2 {
+        background-position: 290px center;
+    }
+    .point_box {
+        height: 320px;
+        flex: 5;
+        margin-right: 0;
+        margin-bottom: 40px;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .point_box .point_view {
+        width: 65%;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .hiik_box .hiik_view {
+        width: 55%;
+        margin-top: 20px;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 16px;
+    }
+    .hiik_box {
+        height: 320px;
+        flex: 5;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .logTab_box ul li a {
+        font-size: 12px;
+    }
+    .logTab_box ul {
+        width: 75%;
+    }
+    /* 2019 08 20 수정:S */
+    .tab1{
+        height: 1280px;
+    }
+    .tab1_info{}
+    .hiik_infoWrap {
+        flex-direction: column;
+    }
+    .info1{
+        margin-bottom: 20px;
+    }
+    /* 2019 08 20 수정:E */
+}
+@media screen and (min-width: 640px) and (max-width: 779px){
+    .content_wrap {
+        width: 95%;
+    }
+    .tab {
+        width: 100%;
+    }
+    .inner_box{
+        flex-direction: column;
+        height: 640px;
+        margin-top: 20px !important;
+    }
+    .tab1 .point_box h2 {
+        background-position: 220px center;
+    }
+    .tab1 .hiik_box h2 {
+        background-position: 225px center;
+    }
+    .point_box {
+        height: 320px;
+        flex: 5;
+        margin-right: 0;
+        margin-bottom: 40px;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .point_box .point_view {
+        width: 65%;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .hiik_box .hiik_view {
+        width: 75%;
+        margin-top: 20px;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 16px;
+    }
+    .hiik_box {
+        height: 320px;
+        flex: 5;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .logTab_box ul {
+        width: 90%;
+    }
+    .logTab_box ul li a {
+        font-size: 12px;
+    }
+    .tab2 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    .tab3 .tab3_info p {
+        font-size: 13px;
+    }
+    .tab3 ul li p {
+        width: 140px;
+        font-size: 13px;
+    }
+    .tab3 ul li input {
+        width: 240px;
+        height: 25px;
+        border: 1px solid #8c650c;
+    }
+    .tab3 ul li span {
+        font-size: 11px;
+        margin-left: 10px;
+        display: none;
+    }
+    .tab4 .tab4_info p {
+        font-size: 13px;
+    }
+    .tab4 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    .tab5 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    /* 2019 08 20 수정:S */
+    .tab1{
+        height: 1300px;
+    }
+    .tab1_info{}
+    .hiik_infoWrap {
+        flex-direction: column;
+    }
+    .info1{
+        margin-bottom: 20px;
+    }
+    /* 2019 08 20 수정:E */
+}
+@media screen and (min-width: 480px) and (max-width: 639px){
+    .content_wrap {
+        width: 100%;
+        margin-top: 20px;
+    }
+    nav ul li a {
+        color: #fff;
+        font-weight: bold;
+        display: block;
+        font-size: 12px;
+    }
+    nav ul li:nth-of-type(1) {
+        border-top-left-radius: 0px;
+    }
+    nav ul li:nth-of-type(5) {
+        border-top-right-radius: 0px;
+    }
+    .tab {
+        width: 100%;
+        margin: 0 auto;
+        height: 750px;
+        padding: 20px 5px;
+    }
+    .inner_box{
+        flex-direction: column;
+        height: 630px;
+        margin-top: 20px !important;
+    }
+    .tab1 .point_box h2 {
+        background-position: 140px center;
+    }
+    .tab1 .hiik_box h2 {
+        background-position: 150px center;
+    }
+    .point_box {
+        height: 320px;
+        flex: 5;
+        margin-right: 0;
+        margin-bottom: 40px;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .point_box .point_view {
+        width: 90%;
+        font-size: 17px;
+        margin-top: 50px;
+    }
+    .hiik_box .hiik_view {
+        width: 75%;
+        margin-top: 20px;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 16px;
+    }
+    .hiik_box {
+        height: 320px;
+        flex: 5;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .logTab_box ul {
+        width: 100%;
+    }
+    .logTab_box ul li a {
+        font-size: 12px;
+    }
+    .tab2 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    .tab3 .tab3_info p {
+        font-size: 13px;
+    }
+    .tab3 ul li p {
+        width: 130px;
+        font-size: 12px;
+    }
+    .tab3 ul li input {
+        width: 200px;
+        height: 25px;
+        border: 1px solid #8c650c;
+    }
+    .tab3 ul li .otp_btn {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .tab3 ul li span {
+        font-size: 11px;
+        margin-left: 10px;
+        display: none;
+    }
+    .tab3 .tab3_info img {
+        display: none;
+    }
+    .tab4 .tab4_info p {
+        font-size: 13px;
+    }
+    .tab4 .tab4_info img {
+        display: none;
+    }
+    .tab4 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    .tab5 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    /* 2019 08 20 수정:S */
+    .tab1{
+        height: 1320px;
+    }
+    .hiik_infoWrap {
+        flex-direction: column;
+    }
+    .info1{
+        margin-bottom: 20px;
+    }
+    /* 2019 08 20 수정:E */
+}
+@media screen and (max-width: 479px){
+    .content_wrap {
+        width: 100%;
+        margin-top: 20px;
+    }
+    nav ul li a {
+        color: #fff;
+        font-weight: bold;
+        display: block;
+        font-size: 11px;
+    }
+    nav ul li:nth-of-type(1) {
+        border-top-left-radius: 0px;
+    }
+    nav ul li:nth-of-type(5) {
+        border-top-right-radius: 0px;
+    }
+    .tab {
+        width: 100%;
+        margin: 0 auto;
+        height: 750px;
+        padding: 20px 5px;
+    }
+    .inner_box{
+        flex-direction: column;
+        height: 640px;
+        margin-top: 20px !important;
+    }
+    .tab1 .point_box h2 {
+        background-position: 90px center;
+        font-size: 15px;
+    }
+    .tab1 .hiik_box h2 {
+        background-position: 95px center;
+        font-size: 15px;
+    }
+    .point_box {
+        height: 320px;
+        flex: 5;
+        margin-right: 0;
+        margin-bottom: 40px;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .point_box .point_view {
+        width: 90%;
+        font-size: 16px;
+        margin-top: 50px;
+    }
+    .point_view .my_p {
+        font-size: 20px;
+    }
+    .hiik_box .hiik_view {
+        width: 90%;
+        margin-top: 20px;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 15px;
+    }
+    .hiik_box {
+        height: 320px;
+        flex: 5;
+        background: url(../img/box_bg_3.png) no-repeat;
+        background-position: center center;
+    }
+    .charge_btn {
+        width: 90%;
+        margin-left: -45%;
+        bottom: 35px;
+    }
+    .logTab_box ul {
+        width: 100%;
+    }
+    .logTab_box ul li a {
+        font-size: 11px;
+    }
+    .tab2 table {
+        font-size: 12px;
+    }
+    .tab2 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    .tab3 .tab3_info {
+        text-indent: 0px;
+        line-height: 20px;
+    }
+    .tab3 .tab3_info p {
+        font-size: 12px;
+    }
+    .tab3 ul li p {
+        width: 110px;
+        font-size: 12px;
+    }
+    .tab3 ul li input {
+        width: 145px;
+        height: 25px;
+        border: 1px solid #8c650c;
+    }
+    .tab3 ul li .otp_btn {
+        display: inline-block;
+        margin-left: 0px;
+        font-size: 11px;
+    }
+    .tab3 ul li span {
+        font-size: 11px;
+        margin-left: 10px;
+        display: none;
+    }
+    .tab3 .tab3_info img {
+        display: none;
+    }
+    .tab4 .tab4_info p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .tab4 .tab4_info img {
+        display: none;
+    }
+    .tab4 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    .tab5 table thead tr {
+        height: 30px;
+        font-size: 12px;
+    }
+    /* 2019 08 20 수정:S */
+    .tab1{
+        height: 1340px;
+    }
+    .tab1_info{
+        padding: 10px 10px;
+    }
+    .tab1_info p{
+        font-size: 12px;
+    }
+    .hiik_infoWrap {
+        flex-direction: column;
+    }
+    .info1{
+        margin-bottom: 20px;
+    }
+    /* 2019 08 20 수정:E */
+}

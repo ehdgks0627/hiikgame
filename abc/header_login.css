@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background: #000;
+/*    border-bottom: 1px solid #ccc;*/
+}
+.header_wrap{
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header h1.logo{
+    float: left;
+    width: 10%;
+    margin-top: 15px;
+}
+header h1.logo img{
+    width: 160px;
+}
+
+.left_nav{
+    position: absolute;
+    left: 50%;
+    width: 40%;
+    margin-left: -20%;
+}
+.left_nav ul{}
+.left_nav ul li{
+    width: 33.333%;
+    text-align: center;
+    float: left;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.left_nav ul li a{
+    color: #fff;
+    text-shadow: 2px 2px 2px #5d5d5d;
+}
+
+
+.select_lang{
+    float: right;
+    width: 10%;
+    text-align: center;
+    color: #fff;
+    line-height: 70px;
+    cursor: pointer;
+    display: table;
+}
+.select_lang img{
+    vertical-align: middle;
+}
+/*2019-08-20 수정:S*/
+.lang_list{
+    position: absolute;
+    z-index: 999;
+    width: 190px;
+    height: 175px;
+    top: 70px;
+    right: 2%;
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    color: #222;
+    overflow-y: scroll;
+}
+.lang_list ul{
+    width: 100%;
+    height: 100%;
+}
+.lang_list ul li{
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 35px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-around;
+}
+.lang_list ul li:nth-of-type(15){
+    margin-bottom: 0;
+}
+.lang_list ul li span{
+    flex: 3;
+}
+.lang_list ul li b{
+    flex: 7;
+}
+.lang_list ul li img{
+    width: 35px;
+    vertical-align: middle;
+}
+/*2019-08-20 수정:E*/
+.my_point{
+    float: right;
+    width: 20%;
+    margin-top: 20px;
+    position: relative;
+}
+.my_point ul{}
+.my_point ul li{
+    float: left;
+    color: #fff;
+    width: 30%;
+    border: 1px solid #fff;
+    margin-left: 5px;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.my_point ul li:nth-of-type(3){
+    cursor: pointer;
+}
+.my_point ul li p{}
+.my_point ul li p:nth-of-type(1){
+    font-size: 11px;
+}
+.my_point ul li p:nth-of-type(2){
+    font-weight: bold;
+}
+.log_out{
+    background: rgba(255,255,255,0.9);
+    z-index: 999;
+    position: absolute;
+    top: 40px;
+    right: 17px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+}
+.log_out ul{}
+.log_out ul li{
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0;
+    border: none;
+}
+.log_out ul li:nth-of-type(1){
+    border-bottom: 1px solid #ccc;
+}
+.log_out ul li a{
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+    color: #5c5c5c;
+}
+
+
+@media screen and (min-width: 1280px) and (max-width: 1599px){
+    .left_nav{
+        left: 40%;
+    }
+    .lang_list {
+        top: 60px;
+        right: 2%;
+    }
+    .my_point{width: 30%;}
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    .header_wrap{
+        width: 90%;
+    }
+    header h1.logo img{
+        width: 120px;
+        margin-top: 10px;
+    }
+    .select_lang{
+        width: 15%;
+    }
+    .lang_list {
+        top: 60px;
+        right: 4%;
+    }
+    .left_nav{
+        width: 30%;
+        left: 40%;
+    }
+    .left_nav ul li{
+        font-size: 18px;
+        line-height: 80px;
+    }
+    .my_point{width: 30%;}
+    .my_point ul li p:nth-of-type(2){
+        font-weight: normal;
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 780px) and (max-width: 1023px){
+    .header_wrap{
+        width: 95%;
+    }
+    header h1.logo img{
+        width: 90px;
+        margin-top: 10px;
+    }
+    .left_nav{
+        width: 35%;
+        left: 35%;
+    }
+    .left_nav ul li{
+        font-size: 15px;
+        line-height: 70px;
+    }
+    .select_lang{
+        width: 10%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .select_lang{font-size: 13px;}
+    .select_lang img{
+        width: 20px;
+    }
+    .lang_list {
+        top: 60px;
+        right: 2%;
+    }
+    .my_point{
+        margin-top: 0;
+        width: 40%;
+        position: absolute;
+        right: 70px;
+        top: 20px;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 779px){
+     .header_wrap{
+        width: 95%;
+    }
+    header h1.logo img{
+        width: 90px;
+        margin-top: 10px;
+    }
+    .left_nav{
+        width: 35%;
+        left: 35%;
+    }
+    .left_nav ul li{
+        font-size: 15px;
+        line-height: 70px;
+    }
+    .select_lang{
+        width: 15%;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+    }
+    .select_lang{font-size: 13px;}
+    .select_lang img{
+        width: 20px;
+    }
+    .lang_list {
+        top: 70px;
+        right: 2%;
+    }
+    .my_point{
+        margin-top: 0;
+        width: 50%;
+        position: absolute;
+        right: 0px;
+        top: 5px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 639px){
+    header{
+        height: 120px;
+    }
+    .header_wrap{
+        width: 90%;
+    }
+    header h1.logo img{
+        width: 90px;
+        margin-top: 10px;
+    }
+    .left_nav{
+        width: 70%;
+        left: 40%;
+    }
+    .left_nav ul li{
+        font-size: 15px;
+        line-height: 70px;
+    }
+    .select_lang{
+        width: 15%;
+        position: absolute;
+        top: 50px;
+        right:10px;
+    }
+    .select_lang{font-size: 13px;}
+    .select_lang img{
+        width: 20px;
+    }
+    .lang_list {
+        top: 100px;
+        right: 2%;
+    }
+    .my_point{
+        margin-top: 0;
+        width: 80%;
+        position: absolute;
+        left: 0px;
+        top: 70px;
+    }
+    .list .game_list{width: 400px;}
+}
+@media screen and (max-width: 479px){
+    header{
+        height: 120px;
+    }
+    .header_wrap{
+        width: 90%;
+    }
+    header h1.logo{
+        width: 90px;
+        margin: 0 auto;
+        float: none;
+    }
+    header h1.logo img{
+        width: 90px;
+        margin-top: 10px;
+        margin: 0 auto;
+    }
+    .left_nav{
+        width: 100%;
+        left: 0%;
+        margin-left: 0;
+        top: 15px;
+    }
+    .left_nav ul li{
+        font-size: 15px;
+        line-height: 70px;
+    }
+    .select_lang{
+        width: 20%;
+        position: absolute;
+        top: 50px;
+        right:0px;
+    }
+    .select_lang{font-size: 13px;}
+    .select_lang img{
+        width: 20px;
+    }
+    .lang_list {
+        top: 100px;
+        right: 2%;
+    }
+    .my_point{
+        margin-top: 0;
+        width: 80%;
+        position: absolute;
+        left: 0px;
+        top: 70px;
+    }
+    .list .game_list{width: 400px;}
+}

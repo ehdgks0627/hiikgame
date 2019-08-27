@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>HIIK GAME</title>
+    <link rel="stylesheet" href="./css/mypage.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/header_login.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./libs/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="./libs/et-line/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/tab_menu.js"></script>
+    <script src="js/pop.js"></script>
+    <script>
+      $(document).ready( function() {
+        $( '.select_lang' ).click( function() {
+          $( '.lang_list' ).toggle( 'fast' );
+            return false;
+        });
+      });
+      $(document).ready( function() {
+        $( '.my_point ul li:nth-of-type(3)' ).click( function() {
+          $( '.log_out' ).toggle( 'fast' );
+            return false;
+        });
+      });
+      $(function(){
+         $('.logTab_box ul li a').click(function(){
+             $('.logTab_box ul li a').removeClass('li_bgcolor');
+             $(this).addClass('li_bgcolor');
+             return false;
+         });
+      });
+    </script>
+</head>
+<body>
+    <header>
+       <div class="header_wrap">
+            <h1 class="logo">
+                    <a href="index_login.html"><img src="./img/logo_h.png" alt=""></a>
+                </h1>
+                <div class="left_nav">
+                    <ul>
+                        <li><a href="index_login.html">게임</a></li>
+                        <li><a href="mypage.html">지갑</a></li>
+                        <li><a href="qna.html">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="select_lang">
+                    <img src="./img/ko.png" alt="">
+                    한국어
+                </div>
+                <!-- 2019-08-12 수정:S -->
+                <div class="lang_list">
+                    <ul>
+                        <li><span><img src="./img/ko.png" alt=""></span><b>한국어</b></li>
+                        <li><span><img src="./img/cn.png" alt=""></span><b>中文</b></li>
+                        <li><span><img src="./img/en.png" alt=""></span><b>English</b></li>
+                        <li><span><img src="./img/jp.png" alt=""></span><b>日本語</b></li>
+                        <li><span><img src="./img/ru.png" alt=""></span><b>Русский</b></li>
+                        <li><span><img src="./img/th.png" alt=""></span><b>ภาษาไทย</b></li>
+                        <li><span><img src="./img/vi.png" alt=""></span><b>tiếng Việt</b></li>
+                        <li><span><img src="./img/km.png" alt=""></span><b>ភាសាខ្មែរ</b></li>
+                        <li><span><img src="./img/es.png" alt=""></span><b>Español</b></li>
+                        <li><span><img src="./img/de.png" alt=""></span><b>Deutsch</b></li>
+                        <li><span><img src="./img/fr.png" alt=""></span><b>français</b></li>
+                        <li><span><img src="./img/pt.png" alt=""></span><b>Português</b></li>
+                        <li><span><img src="./img/ar.png" alt=""></span><b>العربية</b></li>
+                        <li><span><img src="./img/it.png" alt=""></span><b>italiano</b></li>
+                        <li><span><img src="./img/id.png" alt=""></span><b>Orang indonesia</b></li>
+                    </ul>
+                </div>
+                <!-- 2019-08-12 수정:E -->
+            <div class="my_point">
+                <ul>
+                    <li>
+                        <p>Game balance</p>
+                        <p>0 COIN</p>
+                    </li>
+                    <li>
+                        <p>Ethereum</p>
+                        <p>0.000 ETH</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-tag"></i>
+                        <p>0x901B244</p>
+                    </li>
+                </ul>
+                <div class="log_out">
+                    <ul>
+                        <li><a href="mypage.html">상세보기</a></li>
+                        <li><a href="index.html">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div class="content_wrap">
+            <nav>
+                <ul class="wallet">
+                    <li>
+                        <a href="#" data-tab="tab1">포인트</a>
+                    </li>
+                    <li>
+                        <a href="#" data-tab="tab2">사용내역</a>
+                    </li>
+                    <li>
+                        <a href="#" data-tab="tab3">회원정보 수정</a>
+                    </li>
+                    <li>
+                        <a href="#" data-tab="tab4">쿠폰등록</a>
+                    </li>
+                    <li>
+                        <a href="#" data-tab="tab5">이벤트</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tab tab1">
+                <div class="inner_box">
+                    <div class="point_box">
+                        <h2>나의 포인트</h2>
+                        <div class="point_view">
+                            <p>나의 보유 포인트</p>
+                            <div class="my_p"><span class="orange">46000</span> Point</div>
+                        </div>
+                        <div class="charge_btn point_charge">
+                            <p><i class="fas fa-exchange-alt"></i><span>포인트 전환하기</span></p>
+                            <p><i class="fas fa-coins"></i><span>포인트 충전하기</span></p>
+                        </div>
+                    </div>
+                    <div class="charge_pop pop3">
+                        <h2>POINT 전환하기</h2>
+                        <div class="pop_body">
+                            <ul>
+                                <li>
+                                    <p>보유 46000 POINT</p>
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="전환하실 수량을 입력해주세요. (POINT)">
+                                </li>
+                                <li>
+                                    <select name="" id="">
+                                        <option value="">KRWH</option>
+                                        <option value="">CNYH</option>
+                                        <option value="">USDH</option>
+                                        <option value="">THBH</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="confirm_box">
+                            <p>전환하실 POINT</p>
+                            <div class="final_view">
+                                <span>1000 POINT</span>
+                            </div>
+                            <div>
+                                <a href="">전환하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="charge_pop pop4">
+                        <h2>POINT 충전하기</h2>
+                        <div class="pop_body">
+                            <ul>
+                                <li>
+                                    <p>보유 46000 POINT</p>
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="충전하실 수량을 입력해주세요. (POINT)">
+                                </li>
+                                <li>
+                                    <select name="" id="">
+                                        <option value="">KRWH</option>
+                                        <option value="">CNYH</option>
+                                        <option value="">USDH</option>
+                                        <option value="">THBH</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="confirm_box">
+                            <p>충전하실 POINT</p>
+                            <div class="final_view">
+                                <span>500 POINT</span>
+                            </div>
+                            <div>
+                                <a href="">충전하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hiik_box">
+                        <h2>나의 HIIK</h2>
+                        <div class="hiik_view">
+                            <ul>
+                                <li>
+                                    <p>나의 보유 HIIK</p>
+                                    <div class="my_h"><span class="orange">755</span> HIIK</div>
+                                </li>
+                                <li>
+                                    <p>나의 HIIK 채굴현황</p>
+                                    <div class="my_min"><span class="orange">405</span> HIIK</div>
+                                </li>
+                                <li>
+                                    <p>나의 HIIK 적립현황</p>
+                                    <div class="my_accu"><span class="orange">350</span> HIIK</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="charge_btn hiik_change">
+                            <p><i class="fas fa-exchange-alt"></i><span>HIIK 환전하기</span></p>
+                            <p><i class="fas fa-coins"></i><span>HIIK 충전하기</span></p>
+                        </div>
+                    </div>
+                    <div class="charge_pop pop1">
+                        <h2>HIIK 환전하기</h2>
+                        <div class="pop_body">
+                            <ul>
+                                <li>
+                                    <p>보유 755 HIIK</p>
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="환전하실 수량을 입력해주세요. (HIIK)">
+                                </li>
+                                <li>
+                                    <select name="" id="">
+                                        <option value="">KRWH</option>
+                                        <option value="">CNYH</option>
+                                        <option value="">USDH</option>
+                                        <option value="">HIIK</option>
+                                        <option value="">THBH</option>
+                                    </select>
+                                </li>
+                                <li class="wallet_select">
+                                    <select name="" id="">
+                                        <option value="" disabled selected>출금 지갑주소를 선택하세요.</option>
+                                        <option value="">직접입력</option>
+                                        <option value="">HIIK MAX - DJEKSMKDCEF</option>
+                                        <option value="">365 KHAB - D5432545423</option>
+                                        <option value="">힉 맥스 2 - XCEOW34EFRW1</option>
+                                    </select>
+                                </li>
+                                <li class="name_form">
+                                    <form action="" class="form1"><input type="text" placeholder="이름"></form>
+                                    <form action="" class="form2"><input type="text" placeholder="직접입력"></form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="confirm_box confirm2">
+                            <p>환전하실 HIIK</p>
+                            <div class="final_view">
+                                <span>100 HIIK</span>
+                            </div>
+                            <div>
+                                <a href="">환전하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="charge_pop pop2">
+                        <h2>HIIK 충전하기</h2>
+                        <div class="pop_body">
+                            <ul>
+                                <li>
+                                    <p>보유 755 HIIK</p>
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="충전하실 수량을 입력해주세요. (HIIK)">
+                                </li>
+                                <li class="mb-5">
+                                    <select name="" id="">
+                                        <option value="">KRWH</option>
+                                        <option value="">CNYH</option>
+                                        <option value="">USDH</option>
+                                        <option value="">HIIK</option>
+                                        <option value="">THBH</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <p>*<span>HIIK으로 직접 충전 시,</span> <b>[회원정보 수정-지갑주소]</b> 복사 후 <b>HIIK MAX 출금 주소</b>에 입력하여 이체하세요.</p>
+                        </div>
+                        <div class="confirm_box confirm2">
+                            <p>충전하실 HIIK</p>
+                            <div class="final_view">
+                                <span>500 HIIK</span>
+                            </div>
+                            <div>
+                                <a href="">충전하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="complete_alert">
+                        <h3>완료되었습니다.</h3>
+                    </div>
+                </div>
+                <!-- 2019 08 20 수정:S -->
+                <div class="tab1_info">
+                    <div class="hiik_infoWrap">
+                        <div class="info1">
+                            <h2>◎ HIIK 충전</h2>
+                            <h3>1 ) HIIK 으로 충전</h3>
+                            <p>1. [HIIK GAME]-[마이페이지]-[회원정보 수정]-[지갑주소] 복사</p>
+                            <p>2. 출금하려는 페이지(ex.거래소)의 [지급]-[HIIK]-[출금주소] 에 입력 후 출금</p>
+                            <p>3. HIIK Token 충전완료 및 보유량 확인</p>
+                            <h3>2 ) 국가화폐 (pay) 로 충전</h3>
+                            <p>1. [PAY] 에서 로그인 후 원화로 국가화폐 충전</p>
+                            <p>2. [HIIK GAME]-[지갑]-[HIIK 충전하기] 에서 수량과 충전화폐를 선택하여 충전</p>
+                            <p>3. 국가화폐로 HIIK 충전완료 및 보유량 확인</p>
+                        </div>
+                        <div class="info2">
+                            <h2>◎ HIIK 환전</h2>
+                            <h3>1 ) HIIK 출금</h3>
+                            <p>1. [HIIK GAME]-[지갑]-[HIIK 전환하기] 에서 수량 선택</p>
+                            <p>2. [출금주소] 에 보내려는 지갑주소 입력</p>
+                            <h3>2 ) 국가화폐 (pay) 로 환전</h3>
+                            <p>1. [HIIK GAME]-[지갑]-[HIIK 환전하기] 에서 수량과 환전화폐를 선택하여 환전</p>
+                            <p>2. [HIIK PAY] 에서 로그인 후 보유량 확인</p>
+                        </div>
+                    </div>
+                    <div class="info3">
+                        <h2>◎ POINT 전환</h2>
+                        <h3>-HIIK을 포인트로 전환 후 게임에 참여할 수 있습니다.</h3>
+                        <p>1) 포인트 충전하기or전환하기 선택</p>
+                        <p>2) 원하는 수량 입력</p>
+                        <p>3) 충전or전환 완료</p>
+                    </div>
+                </div>
+                <!-- 2019 08 20 수정:E -->
+            </div>
+            <div class="tab tab2">
+                <h2>사용내역</h2>
+                <div class="logTab_box">
+                    <ul>
+                        <li><a href="#" data-tab="log1" class="li_bgcolor">포인트 사용내역</a></li>
+                        <li><a href="#" data-tab="log2">포인트 전환 내역</a></li>
+                        <!-- 2019 07 30 수정: S -->
+                        <li><a href="#" data-tab="log3">HIIK 충전 내역</a></li>
+                        <li><a href="#" data-tab="log4">HIIK 환전 내역</a></li>
+                        <!-- 2019 07 30 수정: E -->
+                    </ul>
+                </div>
+                <div class="log_table log1">
+                    <table>
+                        <colgroup>
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td>신청일자</td>
+                                <td>구분</td>
+                                <td>포인트</td>
+                                <td>보너스</td>
+                                <td>진행결과</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2018-12-19 04:40:20</td>
+                                <td>사용</td>
+                                <td>123,456</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                            <tr>
+                                <td>2018-10-19 16:54:15</td>
+                                <td>사용</td>
+                                <td>100,000</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nav_buttons">
+                        <button name="prev" class="nav_btn" disabled>Prev</button>
+                        <button class="nav_page_btn" data-page="1" disabled>1</button>
+                        <button class="nav_page_btn" data-page="2">2</button>
+                        <button class="nav_page_btn" data-page="3">3</button>
+                        <button class="nav_page_btn" data-page="4">4</button>
+                        <button class="nav_page_btn" data-page="5">5</button>
+                        <button name="next" class="nav_btn">Next</button>
+                    </div>
+                </div>
+                <div class="log_table log2">
+                    <table>
+                        <colgroup>
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td>신청일자</td>
+                                <td>구분</td>
+                                <td>신청금액</td>
+                                <td>보너스</td>
+                                <td>진행결과</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2200-12-19 04:40:20</td>
+                                <td>전환</td>
+                                <td>123,456원</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                            <tr>
+                                <td>2018-10-19 16:54:15</td>
+                                <td>전환</td>
+                                <td>100,000원</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nav_buttons">
+                        <button name="prev" class="nav_btn" disabled>Prev</button>
+                        <button class="nav_page_btn" data-page="1" disabled>1</button>
+                        <button class="nav_page_btn" data-page="2">2</button>
+                        <button class="nav_page_btn" data-page="3">3</button>
+                        <button class="nav_page_btn" data-page="4">4</button>
+                        <button class="nav_page_btn" data-page="5">5</button>
+                        <button name="next" class="nav_btn">Next</button>
+                    </div>
+                </div>
+                <div class="log_table log3">
+                    <table>
+                        <colgroup>
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td>신청일자</td>
+                                <td>구분</td>
+                                <td>신청금액</td>
+                                <td>보너스</td>
+                                <td>진행결과</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2300-12-19 04:40:20</td>
+                                <td>충전</td>
+                                <td>123,456원</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                            <tr>
+                                <td>2018-10-19 16:54:15</td>
+                                <td>충전</td>
+                                <td>100,000원</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nav_buttons">
+                        <button name="prev" class="nav_btn" disabled>Prev</button>
+                        <button class="nav_page_btn" data-page="1" disabled>1</button>
+                        <button class="nav_page_btn" data-page="2">2</button>
+                        <button class="nav_page_btn" data-page="3">3</button>
+                        <button class="nav_page_btn" data-page="4">4</button>
+                        <button class="nav_page_btn" data-page="5">5</button>
+                        <button name="next" class="nav_btn">Next</button>
+                    </div>
+                </div>
+                <!-- 2019 07 30 수정: S -->
+                <div class="log_table log4">
+                    <table>
+                        <colgroup>
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td>신청일자</td>
+                                <td>구분</td>
+                                <td>신청금액</td>
+                                <td>보너스</td>
+                                <td>진행결과</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2400-12-19 04:40:20</td>
+                                <td>충전</td>
+                                <td>123,456원</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                            <tr>
+                                <td>2018-10-19 16:54:15</td>
+                                <td>충전</td>
+                                <td>100,000원</td>
+                                <td>0원</td>
+                                <td>완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nav_buttons">
+                        <button name="prev" class="nav_btn" disabled>Prev</button>
+                        <button class="nav_page_btn" data-page="1" disabled>1</button>
+                        <button class="nav_page_btn" data-page="2">2</button>
+                        <button class="nav_page_btn" data-page="3">3</button>
+                        <button class="nav_page_btn" data-page="4">4</button>
+                        <button class="nav_page_btn" data-page="5">5</button>
+                        <button name="next" class="nav_btn">Next</button>
+                    </div>
+                </div>
+                <!-- 2019 07 30 수정: E -->
+            </div>
+            <div class="tab tab3">
+                <h2>회원정보 수정</h2>
+                <div class="tab3_info">
+                    <img src="./img/service.png" alt="">
+                    <p>HIIK의 시스템은 암호화 되어 고객님의 정보를 안전하게 보호됩니다.</p>
+                    <p>다양한 이벤트 혜택을 위해 정확한 회원정보를 업데이트 해주세요.</p>
+                </div>
+                <ul>
+                    <li>
+                        <p>아이디</p>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <p>비밀번호</p>
+                        <input type="password">
+                    </li>
+                    <li>
+                        <p>비밀번호 확인</p>
+                        <input type="password">
+                    </li>
+                    <li>
+                        <p>이름(or아이디)</p>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <p>구글 OTP 인증설정</p>
+                        <input type="text" placeholder="인증 번호를 입력하세요.">
+                        <div class="otp_btn">
+                            <a href="">인증번호 확인</a>
+                        </div>
+                    </li>
+                    <li>
+                        <p>추천인</p>
+                        <input type="text">
+                        <span>* 추천인 아이디가 없거나 모르시면 입력하지 않아도 됩니다.</span>
+                    </li>
+                </ul>
+                <div class="edit">
+                    정보수정
+                </div>
+                <div class="otp_pop">
+                    
+                </div>
+            </div>
+            <div class="tab tab4">
+                <h2>쿠폰 등록</h2>
+                <div class="tab4_info">
+                   <img src="./img/service.png" alt="">
+                    <p>쿠폰사용에 대한 문의사항은 고객센터로 연락주시면<br>신속하고 친절하게 안내해 드리겠습니다.</p>
+                </div>
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td>발급일</td>
+                            <td>쿠폰명</td>
+                            <td>쿠폰금액</td>
+                            <td>만료일</td>
+                            <td>게임선택</td>
+                            <td>쿠폰사용</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="nav_buttons">
+                    <button name="prev" class="nav_btn" disabled>Prev</button>
+<!--                    <span id="currentPage">1</span>-->
+                    <button class="nav_page_btn" data-page="1" disabled>1</button>
+                    <button class="nav_page_btn" data-page="2">2</button>
+                    <button class="nav_page_btn" data-page="3">3</button>
+                    <button class="nav_page_btn" data-page="4">4</button>
+                    <button class="nav_page_btn" data-page="5">5</button>
+                    <button name="next" class="nav_btn">Next</button>
+<!--
+                    <button class="nav_page_btn" data-page="1" disabled>1</button>
+                    <button class="nav_page_btn" data-page="2">2</button>
+                    <button class="nav_page_btn" data-page="3">3</button>
+                    <button class="nav_page_btn" data-page="4">4</button>
+                    <button class="nav_page_btn" data-page="5">5</button>
+-->
+                </div>
+            </div>
+            <div class="tab tab5">
+                <h2>이벤트</h2>
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td>번호</td>
+                            <td>제목</td>
+                            <td>작성자</td>
+                            <td>일시</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="nav_buttons">
+                    <button name="prev" class="nav_btn" disabled>Prev</button>
+<!--                    <span id="currentPage">1</span>-->
+                    <button class="nav_page_btn" data-page="1" disabled>1</button>
+                    <button class="nav_page_btn" data-page="2">2</button>
+                    <button class="nav_page_btn" data-page="3">3</button>
+                    <button class="nav_page_btn" data-page="4">4</button>
+                    <button class="nav_page_btn" data-page="5">5</button>
+                    <button name="next" class="nav_btn">Next</button>
+<!--
+                    <button class="nav_page_btn" data-page="1" disabled>1</button>
+                    <button class="nav_page_btn" data-page="2">2</button>
+                    <button class="nav_page_btn" data-page="3">3</button>
+                    <button class="nav_page_btn" data-page="4">4</button>
+                    <button class="nav_page_btn" data-page="5">5</button>
+-->
+                </div>
+            </div>
+        </div>
+        <div id="black"></div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <div class="copy_wrap">
+               <p class="copy">Copyright &copy; 2019 HIIK &nbsp;All rights reserved.</p>
+               <p class="help">HELP : help@hiikgame.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
