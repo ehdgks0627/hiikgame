@@ -22,12 +22,6 @@
             return false;
         });
       });
-      $(document).ready( function() {
-        $( '.my_point ul li:nth-of-type(3)' ).click( function() {
-          $( '.log_out' ).toggle( 'fast' );
-            return false;
-        });
-      });
     </script>
 </head>
 <body>
@@ -41,13 +35,37 @@
                     <li><a href="index_login.html">게임</a></li>
                     <li><a href="mypage.html">지갑</a></li>
                     <li><a href="qna.html">공지사항</a></li>
+                    <li><a href="#">이용가이드</a></li>
+                </ul>
+            </div>
+            <div class="my_point">
+                <ul>
+                    <li>
+                        <p>Game balance</p>
+                        <p>1,111,111,111 POINT</p>
+                    </li>
+                    <li>
+                        <p>HIIK</p>
+                        <p>392,069 HIIK</p>
+                    </li>
+                    <li>
+                    <!-- 2019-08-26 수정:S -->
+                        <a href="mypage.html">
+                            <p>힉힉힉힉힉힉</p>
+                            <p>0x901B244</p>
+                        </a>
+                        
+                    </li>
+                    <li class="logOut">
+                        <button><a href="index.html">로그아웃</a></button>
+                    </li>
+                    <!-- 2019-08-26 수정:E -->
                 </ul>
             </div>
             <div class="select_lang">
                 <img src="./img/ko.png" alt="">
                     한국어
             </div>
-            <!-- 2019-08-12 수정:S -->
             <div class="lang_list">
                 <ul>
                     <li><span><img src="./img/ko.png" alt=""></span><b>한국어</b></li>
@@ -66,29 +84,6 @@
                     <li><span><img src="./img/it.png" alt=""></span><b>italiano</b></li>
                     <li><span><img src="./img/id.png" alt=""></span><b>Orang indonesia</b></li>
                 </ul>
-            </div>
-            <!-- 2019-08-12 수정:E -->
-            <div class="my_point">
-                <ul>
-                    <li>
-                        <p>Game balance</p>
-                        <p>0 COIN</p>
-                    </li>
-                    <li>
-                        <p>Ethereum</p>
-                        <p>0.000 ETH</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-user-tag"></i>
-                        <p>0x901B244</p>
-                    </li>
-                </ul>
-                <div class="log_out">
-                    <ul>
-                        <li><a href="mypage.html">상세보기</a></li>
-                        <li><a href="index.html">로그아웃</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </header>

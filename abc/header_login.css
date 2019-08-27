@@ -3,22 +3,24 @@
     padding: 0;
 }
 
+/*2019-08-26 수정:S*/
 header{
     width: 100%;
     height: 70px;
     background: #000;
-/*    border-bottom: 1px solid #ccc;*/
 }
 .header_wrap{
-    width: 80%;
+    width: 85%;
     height: 70px;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1.logo{
-    float: left;
-    width: 10%;
+/*    float: left;*/
+    width: 11%;
     margin-top: 15px;
 }
 header h1.logo img{
@@ -26,28 +28,33 @@ header h1.logo img{
 }
 
 .left_nav{
+/*
     position: absolute;
     left: 50%;
-    width: 40%;
-    margin-left: -20%;
+*/
+    width: 50%;
+/*    margin-left: -20%;*/
 }
-.left_nav ul{}
+.left_nav ul{
+    display: flex;
+    justify-content: space-between;
+}
 .left_nav ul li{
     width: 33.333%;
     text-align: center;
-    float: left;
+/*    float: left;*/
     line-height: 70px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 .left_nav ul li a{
     color: #fff;
-    text-shadow: 2px 2px 2px #5d5d5d;
+    text-shadow: 2px 2px 2px #000;
 }
-
+/*2019-08-26 수정:E*/
 
 .select_lang{
-    float: right;
+/*    float: right;*/
     width: 10%;
     text-align: center;
     color: #fff;
@@ -58,7 +65,6 @@ header h1.logo img{
 .select_lang img{
     vertical-align: middle;
 }
-/*2019-08-20 수정:S*/
 .lang_list{
     position: absolute;
     z-index: 999;
@@ -99,26 +105,35 @@ header h1.logo img{
     width: 35px;
     vertical-align: middle;
 }
-/*2019-08-20 수정:E*/
+
+/*2019-08-26 수정:S*/
 .my_point{
-    float: right;
-    width: 20%;
-    margin-top: 20px;
-    position: relative;
-}
-.my_point ul{}
-.my_point ul li{
-    float: left;
-    color: #fff;
+/*    float: right;*/
     width: 30%;
+/*    height: 100%;*/
+    margin-top: 15px;
+/*    position: relative;*/
+}
+.my_point > ul{
+    display: flex;
+    justify-content: space-around;
+}
+.my_point ul li{
+/*    float: left;*/
+    color: #fff;
+/*    width: 33.33%;*/
     border: 1px solid #fff;
-    margin-left: 5px;
+/*    margin-left: 5px;*/
     text-align: center;
     border-radius: 5px;
     box-sizing: border-box;
+    padding: 2px 5px;
 }
-.my_point ul li:nth-of-type(3){
-    cursor: pointer;
+.logOut{
+    padding: 0 !important;
+}
+.my_point ul li a{
+    color: #fff;
 }
 .my_point ul li p{}
 .my_point ul li p:nth-of-type(1){
@@ -127,242 +142,248 @@ header h1.logo img{
 .my_point ul li p:nth-of-type(2){
     font-weight: bold;
 }
-.log_out{
-    background: rgba(255,255,255,0.9);
-    z-index: 999;
-    position: absolute;
-    top: 40px;
-    right: 17px;
-    width: 150px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: none;
-}
-.log_out ul{}
-.log_out ul li{
-    width: 100%;
-    display: block;
-    margin-left: 0;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 0;
+.my_point ul li.logOut{
     border: none;
+    display:flex;
 }
-.log_out ul li:nth-of-type(1){
-    border-bottom: 1px solid #ccc;
-}
-.log_out ul li a{
+.my_point ul li.logOut button{
+    background: none;
+    border: none;
     font-weight: bold;
-    font-size: 13px;
-    display: block;
-    color: #5c5c5c;
 }
-
+/*2019-08-26 수정:E*/
 
 @media screen and (min-width: 1280px) and (max-width: 1599px){
+    /*2019-08-26 수정:S*/
+    .header_wrap {
+        width: 95%;
+    }
     .left_nav{
-        left: 40%;
+        width: 40%;
     }
     .lang_list {
         top: 60px;
         right: 2%;
     }
-    .my_point{width: 30%;}
+    .my_point{
+        width: 33%;
+        font-size: 13px;
+    }
+    /*2019-08-26 수정:E*/
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px){
+    /*2019-08-26 수정:S*/
     .header_wrap{
-        width: 90%;
+        width: 98%;
     }
     header h1.logo img{
-        width: 120px;
-        margin-top: 10px;
+        width: 100px;
+        margin-top: 6px;
     }
     .select_lang{
         width: 15%;
+        font-size: 13px;
+    }
+    .select_lang img{
+        width: 35px;
     }
     .lang_list {
         top: 60px;
         right: 4%;
     }
     .left_nav{
-        width: 30%;
-        left: 40%;
+        width: 40%;
     }
     .left_nav ul li{
-        font-size: 18px;
-        line-height: 80px;
+        font-size: 14px;
+        line-height: 70px;
     }
-    .my_point{width: 30%;}
+    .my_point{
+        width: 40%;
+        margin-left: 20px;
+    }
     .my_point ul li p:nth-of-type(2){
         font-weight: normal;
-        font-size: 13px;
+        font-size: 12px;
     }
+    /*2019-08-26 수정:E*/
 }
 @media screen and (min-width: 780px) and (max-width: 1023px){
+    /*2019-08-26 수정:S*/
+    header{
+        height: 120px;
+    }
     .header_wrap{
-        width: 95%;
+        width: 98%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     header h1.logo img{
         width: 90px;
         margin-top: 10px;
     }
     .left_nav{
-        width: 35%;
-        left: 35%;
+        width: 80%;
     }
     .left_nav ul li{
         font-size: 15px;
         line-height: 70px;
     }
     .select_lang{
-        width: 10%;
-        position: absolute;
-        top: 0px;
-        right: 0px;
+        width: 25%;
+        line-height: 35px;
     }
-    .select_lang{font-size: 13px;}
+    .select_lang{font-size: 14px;}
     .select_lang img{
-        width: 20px;
+        width: 40px;
     }
     .lang_list {
-        top: 60px;
-        right: 2%;
+        top: 120px;
+        right: 12%;
     }
     .my_point{
-        margin-top: 0;
-        width: 40%;
-        position: absolute;
-        right: 70px;
-        top: 20px;
+        margin-top: 0px;
+        width: 50%;
+        font-size: 12px;
+        height: 50px;
     }
+    /*2019-08-26 수정:E*/
 }
 @media screen and (min-width: 640px) and (max-width: 779px){
-     .header_wrap{
-        width: 95%;
+    /*2019-08-26 수정:S*/
+    header{
+        height: 120px;
+    }
+    .header_wrap{
+        width: 98%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     header h1.logo img{
         width: 90px;
         margin-top: 10px;
     }
     .left_nav{
-        width: 35%;
-        left: 35%;
+        width: 80%;
     }
     .left_nav ul li{
         font-size: 15px;
         line-height: 70px;
     }
     .select_lang{
-        width: 15%;
-        position: absolute;
-        top: 20px;
-        right: 0px;
+        width: 25%;
+        line-height: 35px;
     }
     .select_lang{font-size: 13px;}
     .select_lang img{
-        width: 20px;
+        width: 35px;
     }
     .lang_list {
-        top: 70px;
-        right: 2%;
+        top: 120px;
+        right: 10%;
     }
     .my_point{
-        margin-top: 0;
-        width: 50%;
-        position: absolute;
-        right: 0px;
-        top: 5px;
+        margin-top: 0px;
+        width: 60%;
+        font-size: 12px;
+        height: 50px;
     }
+    /*2019-08-26 수정:E*/
 }
 @media screen and (min-width: 480px) and (max-width: 639px){
+    /*2019-08-26 수정:S*/
     header{
         height: 120px;
     }
     .header_wrap{
-        width: 90%;
+        width: 98%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     header h1.logo img{
         width: 90px;
         margin-top: 10px;
     }
     .left_nav{
-        width: 70%;
-        left: 40%;
+        width: 80%;
     }
     .left_nav ul li{
         font-size: 15px;
         line-height: 70px;
     }
     .select_lang{
-        width: 15%;
-        position: absolute;
-        top: 50px;
-        right:10px;
+        width: 25%;
+        line-height: 35px;
     }
     .select_lang{font-size: 13px;}
     .select_lang img{
-        width: 20px;
+        width: 35px;
     }
     .lang_list {
-        top: 100px;
-        right: 2%;
+        top: 120px;
+        right: 3%;
     }
     .my_point{
-        margin-top: 0;
-        width: 80%;
-        position: absolute;
-        left: 0px;
-        top: 70px;
+        margin-top: 0px;
+        width: 75%;
+        font-size: 11px;
+        height: 50px;
     }
-    .list .game_list{width: 400px;}
+    .my_point ul li.logOut button {
+        font-size: 12px;
+    }
+    /*2019-08-26 수정:E*/
 }
 @media screen and (max-width: 479px){
+    /*2019-08-26 수정:S*/
     header{
-        height: 120px;
+        height: 160px;
     }
     .header_wrap{
-        width: 90%;
+        width: 98%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-    header h1.logo{
-        width: 90px;
-        margin: 0 auto;
-        float: none;
+    header h1.logo {
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
     }
     header h1.logo img{
-        width: 90px;
-        margin-top: 10px;
-        margin: 0 auto;
+        width: 100px;
+        margin-top: 0px;
     }
     .left_nav{
         width: 100%;
-        left: 0%;
-        margin-left: 0;
-        top: 15px;
     }
     .left_nav ul li{
         font-size: 15px;
         line-height: 70px;
     }
     .select_lang{
-        width: 20%;
-        position: absolute;
-        top: 50px;
-        right:0px;
+        width: 18%;
+        line-height: 35px;
     }
-    .select_lang{font-size: 13px;}
+    .select_lang{font-size: 12px;}
     .select_lang img{
-        width: 20px;
+        width: 25px;
     }
     .lang_list {
-        top: 100px;
-        right: 2%;
+        top: 160px;
+        right: 3%;
     }
     .my_point{
-        margin-top: 0;
-        width: 80%;
-        position: absolute;
-        left: 0px;
-        top: 70px;
+        margin-top: 0px;
+        width: 82%;
+        font-size: 11px;
+        height: 50px;
     }
-    .list .game_list{width: 400px;}
+    .my_point ul li.logOut button {
+        font-size: 12px;
+    }
+    /*2019-08-26 수정:E*/
 }

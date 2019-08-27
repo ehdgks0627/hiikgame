@@ -24,12 +24,6 @@
             return false;
         });
       });
-      $(document).ready( function() {
-        $( '.my_point ul li:nth-of-type(3)' ).click( function() {
-          $( '.log_out' ).toggle( 'fast' );
-            return false;
-        });
-      });
       $(function(){
          $('.logTab_box ul li a').click(function(){
              $('.logTab_box ul li a').removeClass('li_bgcolor');
@@ -45,59 +39,57 @@
             <h1 class="logo">
                     <a href="index_login.html"><img src="./img/logo_h.png" alt=""></a>
                 </h1>
-                <div class="left_nav">
-                    <ul>
-                        <li><a href="index_login.html">게임</a></li>
-                        <li><a href="mypage.html">지갑</a></li>
-                        <li><a href="qna.html">공지사항</a></li>
-                    </ul>
-                </div>
-                <div class="select_lang">
-                    <img src="./img/ko.png" alt="">
-                    한국어
-                </div>
-                <!-- 2019-08-12 수정:S -->
-                <div class="lang_list">
-                    <ul>
-                        <li><span><img src="./img/ko.png" alt=""></span><b>한국어</b></li>
-                        <li><span><img src="./img/cn.png" alt=""></span><b>中文</b></li>
-                        <li><span><img src="./img/en.png" alt=""></span><b>English</b></li>
-                        <li><span><img src="./img/jp.png" alt=""></span><b>日本語</b></li>
-                        <li><span><img src="./img/ru.png" alt=""></span><b>Русский</b></li>
-                        <li><span><img src="./img/th.png" alt=""></span><b>ภาษาไทย</b></li>
-                        <li><span><img src="./img/vi.png" alt=""></span><b>tiếng Việt</b></li>
-                        <li><span><img src="./img/km.png" alt=""></span><b>ភាសាខ្មែរ</b></li>
-                        <li><span><img src="./img/es.png" alt=""></span><b>Español</b></li>
-                        <li><span><img src="./img/de.png" alt=""></span><b>Deutsch</b></li>
-                        <li><span><img src="./img/fr.png" alt=""></span><b>français</b></li>
-                        <li><span><img src="./img/pt.png" alt=""></span><b>Português</b></li>
-                        <li><span><img src="./img/ar.png" alt=""></span><b>العربية</b></li>
-                        <li><span><img src="./img/it.png" alt=""></span><b>italiano</b></li>
-                        <li><span><img src="./img/id.png" alt=""></span><b>Orang indonesia</b></li>
-                    </ul>
-                </div>
-                <!-- 2019-08-12 수정:E -->
+            <div class="left_nav">
+                <ul>
+                    <li><a href="index_login.html">게임</a></li>
+                    <li><a href="mypage.html">지갑</a></li>
+                    <li><a href="qna.html">공지사항</a></li>
+                    <li><a href="#">이용가이드</a></li>
+                </ul>
+            </div>
             <div class="my_point">
                 <ul>
                     <li>
                         <p>Game balance</p>
-                        <p>0 COIN</p>
+                        <p>1,111,111,111 POINT</p>
                     </li>
                     <li>
                         <p>Ethereum</p>
-                        <p>0.000 ETH</p>
+                        <p>39,069 HIIK</p>
                     </li>
                     <li>
-                        <i class="fas fa-user-tag"></i>
-                        <p>0x901B244</p>
+                        <a href="mypage.html">
+                            <p>힉힉힉힉힉힉</p>
+                            <p>0x901B244</p>
+                        </a>
+                    </li>
+                    <li class="logOut">
+                        <button><a href="index.html">로그아웃</a></button>
                     </li>
                 </ul>
-                <div class="log_out">
-                    <ul>
-                        <li><a href="mypage.html">상세보기</a></li>
-                        <li><a href="index.html">로그아웃</a></li>
-                    </ul>
-                </div>
+            </div>
+            <div class="select_lang">
+                <img src="./img/ko.png" alt="">
+                    한국어
+            </div>
+            <div class="lang_list">
+                <ul>
+                    <li><span><img src="./img/ko.png" alt=""></span><b>한국어</b></li>
+                    <li><span><img src="./img/cn.png" alt=""></span><b>中文</b></li>
+                    <li><span><img src="./img/en.png" alt=""></span><b>English</b></li>
+                    <li><span><img src="./img/jp.png" alt=""></span><b>日本語</b></li>
+                    <li><span><img src="./img/ru.png" alt=""></span><b>Русский</b></li>
+                    <li><span><img src="./img/th.png" alt=""></span><b>ภาษาไทย</b></li>
+                    <li><span><img src="./img/vi.png" alt=""></span><b>tiếng Việt</b></li>
+                    <li><span><img src="./img/km.png" alt=""></span><b>ភាសាខ្មែរ</b></li>
+                    <li><span><img src="./img/es.png" alt=""></span><b>Español</b></li>
+                    <li><span><img src="./img/de.png" alt=""></span><b>Deutsch</b></li>
+                    <li><span><img src="./img/fr.png" alt=""></span><b>français</b></li>
+                    <li><span><img src="./img/pt.png" alt=""></span><b>Português</b></li>
+                    <li><span><img src="./img/ar.png" alt=""></span><b>العربية</b></li>
+                    <li><span><img src="./img/it.png" alt=""></span><b>italiano</b></li>
+                    <li><span><img src="./img/id.png" alt=""></span><b>Orang indonesia</b></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -128,7 +120,7 @@
                         <h2>나의 포인트</h2>
                         <div class="point_view">
                             <p>나의 보유 포인트</p>
-                            <div class="my_p"><span class="orange">46000</span> Point</div>
+                            <div class="my_p"><span class="orange">1,111,111,111</span> Point</div>
                         </div>
                         <div class="charge_btn point_charge">
                             <p><i class="fas fa-exchange-alt"></i><span>포인트 전환하기</span></p>
@@ -136,7 +128,10 @@
                         </div>
                     </div>
                     <div class="charge_pop pop3">
-                        <h2>POINT 전환하기</h2>
+                        <div class="pop_head">
+                            <h2>POINT 전환하기</h2>
+                            <a href="javascript:;" class="close-modal">X</a>
+                        </div>
                         <div class="pop_body">
                             <ul>
                                 <li>
@@ -166,7 +161,10 @@
                         </div>
                     </div>
                     <div class="charge_pop pop4">
-                        <h2>POINT 충전하기</h2>
+                        <div class="pop_head">
+                            <h2>POINT 충전하기</h2>
+                            <a href="javascript:;" class="close-modal">X</a>
+                        </div>
                         <div class="pop_body">
                             <ul>
                                 <li>
@@ -201,15 +199,11 @@
                             <ul>
                                 <li>
                                     <p>나의 보유 HIIK</p>
-                                    <div class="my_h"><span class="orange">755</span> HIIK</div>
+                                    <div class="my_h"><span class="orange">39,069</span> HIIK</div>
                                 </li>
                                 <li>
-                                    <p>나의 HIIK 채굴현황</p>
-                                    <div class="my_min"><span class="orange">405</span> HIIK</div>
-                                </li>
-                                <li>
-                                    <p>나의 HIIK 적립현황</p>
-                                    <div class="my_accu"><span class="orange">350</span> HIIK</div>
+                                    <p>나의 BONUS 적립현황</p>
+                                    <div class="my_min"><span class="orange">405</span> BONUS</div>
                                 </li>
                             </ul>
                         </div>
@@ -219,7 +213,10 @@
                         </div>
                     </div>
                     <div class="charge_pop pop1">
-                        <h2>HIIK 환전하기</h2>
+                        <div class="pop_head">
+                            <h2>HIIK 환전하기</h2>
+                            <a href="javascript:;" class="close-modal">X</a>
+                        </div>
                         <div class="pop_body">
                             <ul>
                                 <li>
@@ -263,7 +260,10 @@
                         </div>
                     </div>
                     <div class="charge_pop pop2">
-                        <h2>HIIK 충전하기</h2>
+                        <div class="pop_head">
+                            <h2>HIIK 충전하기</h2>
+                            <a href="javascript:;" class="close-modal">X</a>
+                        </div>
                         <div class="pop_body">
                             <ul>
                                 <li>
@@ -298,7 +298,7 @@
                         <h3>완료되었습니다.</h3>
                     </div>
                 </div>
-                <!-- 2019 08 20 수정:S -->
+                
                 <div class="tab1_info">
                     <div class="hiik_infoWrap">
                         <div class="info1">
@@ -307,30 +307,42 @@
                             <p>1. [HIIK GAME]-[마이페이지]-[회원정보 수정]-[지갑주소] 복사</p>
                             <p>2. 출금하려는 페이지(ex.거래소)의 [지급]-[HIIK]-[출금주소] 에 입력 후 출금</p>
                             <p>3. HIIK Token 충전완료 및 보유량 확인</p>
-                            <h3>2 ) 국가화폐 (pay) 로 충전</h3>
-                            <p>1. [PAY] 에서 로그인 후 원화로 국가화폐 충전</p>
-                            <p>2. [HIIK GAME]-[지갑]-[HIIK 충전하기] 에서 수량과 충전화폐를 선택하여 충전</p>
-                            <p>3. 국가화폐로 HIIK 충전완료 및 보유량 확인</p>
                         </div>
                         <div class="info2">
                             <h2>◎ HIIK 환전</h2>
                             <h3>1 ) HIIK 출금</h3>
                             <p>1. [HIIK GAME]-[지갑]-[HIIK 전환하기] 에서 수량 선택</p>
                             <p>2. [출금주소] 에 보내려는 지갑주소 입력</p>
-                            <h3>2 ) 국가화폐 (pay) 로 환전</h3>
-                            <p>1. [HIIK GAME]-[지갑]-[HIIK 환전하기] 에서 수량과 환전화폐를 선택하여 환전</p>
-                            <p>2. [HIIK PAY] 에서 로그인 후 보유량 확인</p>
                         </div>
                     </div>
-                    <div class="info3">
-                        <h2>◎ POINT 전환</h2>
-                        <h3>-HIIK을 포인트로 전환 후 게임에 참여할 수 있습니다.</h3>
-                        <p>1) 포인트 충전하기or전환하기 선택</p>
-                        <p>2) 원하는 수량 입력</p>
-                        <p>3) 충전or전환 완료</p>
+                    <!-- 2019 08 26 수정:S -->
+                    <div class="point_infoWrap">
+                        <div class="info3">
+                            <h2>◎ POINT 전환</h2>
+                            <h3>-HIIK을 포인트로 전환 후 게임에 참여할 수 있습니다.</h3>
+                            <p>1) 포인트 충전하기or전환하기 선택</p>
+                            <p>2) 원하는 수량 입력</p>
+                            <p>3) 충전or전환 완료</p>
+                            <h3>-포인트를 HIIK으로 전환 후 출금할 수 있습니다.</h3>
+                            <p>1) 포인트 전환하기 선택</p>
+                            <p>2) 원하는 수량 입력</p>
+                            <p>3) 전환 완료</p>
+                        </div>
+                        <div class="info4">
+                            <h2>◎ OTP 인증 방법</h2>
+                            <h3>-HIIK 이제 시 OTP 인증이 반드시 필요합니다.</h3>
+                            <p>1) Appstore/Playstore 에서 [Google Authenticator] 를 다운로드 합니다.</p>
+                            <p>2) 앱 화면 우측 상단의 +를 클릭합니다.</p>
+                            <p>3) [바코드 스캔] 을 선택합니다.</p>
+                            <p>4) [HIIK GAME]-[지갑]-[OTP QR코드] 를 스캔합니다.</p>
+                            <p>5) SecretKey로 등록된 otp 번호를 하단 빈칸에 입력합니다.</p>
+                            <p>6) [인증번호 확인] 을 선택합니다.</p>
+                            <p>7) OTP 설정이 완료되었습니다.</p>
+                            <p>8) 이체 시 OTP 6자리 숫자를 입력하면 됩니다.</p>
+                        </div>
                     </div>
+                    <!-- 2019 08 26 수정:E -->
                 </div>
-                <!-- 2019 08 20 수정:E -->
             </div>
             <div class="tab tab2">
                 <h2>사용내역</h2>

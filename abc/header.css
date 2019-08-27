@@ -3,22 +3,24 @@
     padding: 0;
 }
 
+/*2019-08-26 수정:S*/
 header{
     width: 100%;
     height: 70px;
     background: #000;
-/*    border-bottom: 1px solid #ccc;*/
 }
 .header_wrap{
-    width: 80%;
+    width: 85%;
     height: 70px;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1.logo{
-    float: left;
-    width: 10%;
+/*    float: left;*/
+    width: 11%;
     margin-top: 15px;
 }
 header h1.logo img{
@@ -26,42 +28,31 @@ header h1.logo img{
 }
 
 .left_nav{
+/*
     position: absolute;
     left: 50%;
-    width: 40%;
-    margin-left: -20%;
+*/
+    width: 50%;
+/*    margin-left: -20%;*/
 }
-.left_nav ul{}
+.left_nav ul{
+    display: flex;
+    justify-content: space-between;
+}
 .left_nav ul li{
     width: 33.333%;
     text-align: center;
-    float: left;
+/*    float: left;*/
     line-height: 70px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 .left_nav ul li a{
     color: #fff;
-    text-shadow: 2px 2px 2px #5d5d5d;
+    text-shadow: 2px 2px 2px #000;
 }
+/*2019-08-26 수정:E*/
 
-
-.right_nav{
-    float: right;
-    width: 10%;
-}
-.right_nav ul{}
-.right_nav ul li{
-    float: left;
-    width: 50%;
-    text-align: center;
-    line-height: 70px;
-    font-size: 14px;
-    font-weight: bold;
-}
-.right_nav ul li a{
-    color: #fff;
-}
 .select_lang{
     float: right;
     width: 10%;
@@ -74,10 +65,9 @@ header h1.logo img{
 .select_lang img{
     vertical-align: middle;
 }
-/*2019-08-20 수정:S*/
 .lang_list{
     position: absolute;
-    z-index: 999;
+    z-index: 9999;
     width: 190px;
     height: 175px;
     top: 70px;
@@ -115,7 +105,7 @@ header h1.logo img{
     width: 35px;
     vertical-align: middle;
 }
-/*2019-08-20 수정:E*/
+
 .login{
     position: absolute;
     right: 5%;
@@ -126,7 +116,7 @@ header h1.logo img{
     height:250px;
     background: #313131;
     border: 3px solid #d49f37;
-    z-index: 998;
+    z-index: 999;
 }
 .login_wrap{
     width: 100%;
@@ -227,6 +217,11 @@ input::placeholder{
 
 
 @media screen and (min-width: 1280px) and (max-width: 1599px){
+    /*2019-08-26 수정:S*/
+    .header_wrap {
+        width: 95%;
+    }
+    /*2019-08-26 수정:E*/
     .login {
         width: 25%;
         top: 80px;
@@ -247,14 +242,37 @@ input::placeholder{
         flex: 2;
         font-size: 12px;
     }
+    /*2019-08-26 수정:S*/
+    .header_wrap{
+        width: 95%;
+    }
+    header h1.logo img{
+        width: 100px;
+        margin-top: 6px;
+    }
+    .left_nav {
+        width: 50%;
+    }
+    .left_nav ul li{
+        font-size: 16px;
+        line-height: 70px;
+    }
+    /*2019-08-26 수정:E*/
 }
 @media screen and (min-width: 780px) and (max-width: 1023px){
-    .left_nav{width: 60%; margin-left: -30%;}
-    header h1.logo{margin-top: 19px;}
-    header h1.logo img{width: 120px;}
-    .left_nav ul li{font-size: 18px;}
-    .select_lang{width: 15%;}
-    .select_lang img{width: 30px;}
+    /*2019-08-26 수정:S*/
+    .header_wrap{
+        width: 95%;
+    }
+    .left_nav{
+        width: 65%;
+    }
+    header h1.logo{width: 15%; margin-top: 18px;}
+    header h1.logo img{width: 110px;}
+    .left_nav ul li{font-size: 15px;}
+    .select_lang{width: 25%;}
+    .select_lang img{width: 35px;}
+    /*2019-08-26 수정:E*/
     .login {
         left: 50%;
         margin-left: -25%;
@@ -271,13 +289,15 @@ input::placeholder{
     .login ul li input{}
 }
 @media screen and (min-width: 640px) and (max-width: 779px){
-    .header_wrap{width: 90%;}
-    .left_nav{width: 60%; margin-left: -30%;}
-    header h1.logo{margin-top: 15px;}
+    /*2019-08-26 수정:S*/
+    .header_wrap{width: 95%;}
+    .left_nav{width: 60%;}
+    header h1.logo{width: 15%;margin-top: 15px;}
     header h1.logo img{width: 100px;}
     .left_nav ul li{font-size: 15px;}
-    .select_lang{width: 15%;}
-    .select_lang img{width: 25px;}
+    .select_lang{width: 25%;}
+    .select_lang img{width: 20px;}
+    /*2019-08-26 수정:E*/
     .login {
         left: 50%;
         margin-left: -27%;
@@ -294,13 +314,22 @@ input::placeholder{
     .login ul li input{}
 }
 @media screen and (min-width: 480px) and (max-width: 639px){
-    .header_wrap{width: 90%;}
-    .left_nav{width: 60%; margin-left: -30%;}
-    header h1.logo{margin-top: 15px;}
+    /*2019-08-26 수정:S*/
+    header{
+        height: 100px;
+    }
+    .header_wrap{width: 95%; height: 100%; flex-wrap:wrap;}
+    .left_nav{width: 75%;}
+    header h1.logo{width: 100%; margin-top: 5px; text-align: center;}
     header h1.logo img{width: 80px;}
-    .left_nav ul li{font-size: 15px;}
-    .select_lang{width: 15%; font-size: 11px;}
+    .left_nav ul li{font-size: 15px; line-height: 55px;}
+    .select_lang{width: 25%; font-size: 12px; line-height: 55px;}
     .select_lang img{width: 20px;}
+    .lang_list{
+        top: 95px;
+        right: 0;
+    }
+    /*2019-08-26 수정:E*/
     .login {
         left: 50%;
         margin-left: -35%;
@@ -317,13 +346,22 @@ input::placeholder{
     .login ul li input{}
 }
 @media screen and (max-width: 479px){
-    .header_wrap{width: 90%;}
-    .left_nav{width: 60%; margin-left: -30%;}
-    header h1.logo{margin-top: 15px;}
-    header h1.logo img{width: 70px;}
-    .left_nav ul li{font-size: 13px;}
-    .select_lang{width: 18%; font-size: 11px;}
+    /*2019-08-26 수정:S*/
+    header{
+        height: 100px;
+    }
+    .header_wrap{width: 95%; height: 100%; flex-wrap:wrap;}
+    .left_nav{width: 80%;}
+    header h1.logo{width: 100%; margin-top: 5px; text-align: center;}
+    header h1.logo img{width: 80px;}
+    .left_nav ul li{font-size: 14px; line-height: 55px;}
+    .select_lang{width: 20%; font-size: 12px; line-height: 55px;}
     .select_lang img{width: 20px;}
+    .lang_list{
+        top: 95px;
+        right: 0;
+    }
+    /*2019-08-26 수정:E*/
     .login {
         left: 50%;
         margin-left: -45%;

@@ -68,13 +68,11 @@ nav ul li a{
 .tab1{
     display: block;
 }
-/* 2019 08 20 수정:S */
 .tab1 .inner_box{
     display: flex;
     width: 100%;
     margin-top: 10px;
 }
-/* 2019 08 20 수정:E */
 .tab2, .tab3, .tab4, .tab5{
     display: none;
 }
@@ -100,7 +98,6 @@ nav ul li a{
     background-size: 25px;
     background-position: 200px center;
 }
-/* 2019 08 20 수정:S */
 .point_box{
     height: 280px;
     flex: 5;
@@ -112,8 +109,9 @@ nav ul li a{
     background: url(../img/box_bg_3.png) no-repeat;
     background-position: center center;
 }
+/* 2019 08 26 수정:S */
 .point_box .point_view {
-    width: 65%;
+    width: 80%;
     margin: 0 auto;
     height: 60px;
     line-height: 60px;
@@ -123,14 +121,14 @@ nav ul li a{
     margin-top: 40px;
     text-shadow: 2px 2px 2px #000;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
-/* 2019 08 20 수정:E */
+/* 2019 08 26 수정:E */
 .point_view p{
-    display: inline-block;
     margin-right: 40px;
 }
 .point_view .my_p{
-    display: inline-block;
     font-size: 23px;
 }
 .charge_btn{
@@ -169,7 +167,6 @@ nav ul li a{
     font-size: 13px;
     font-weight: bold;
 }
-/* 2019 08 20 수정:S */
 .hiik_box{
     height: 280px;
     flex: 5;
@@ -186,11 +183,10 @@ nav ul li a{
     margin: 0 auto;
     text-align: center;
     color: #fff;
-    margin-top: 15px;
+    margin-top: 30px;
     text-shadow: 2px 2px 2px #000;
     font-size: 16px;
 }
-/* 2019 08 20 수정:E */
 .hiik_view ul{}
 
 .hiik_view ul li{
@@ -207,7 +203,6 @@ nav ul li a{
     flex: 5;
 }
 
-/* 2019 08 20 수정:S */
 .tab1_info{
     margin-top: 20px;
     border: 1px dashed #fff;
@@ -229,17 +224,29 @@ nav ul li a{
     color: #9adbd9;
     text-shadow: 2px 2px 2px #000;
 }
+/* 2019 08 26 수정:S */
 .hiik_infoWrap{
     display: flex;
-    justify-content: space-between;
+/*    justify-content: space-between;*/
 }
-.hiik_infoWrap .info1{}
-.hiik_infoWrap .info2{}
-.info3{
+.hiik_infoWrap .info1{
+    flex: 6;
+}
+.hiik_infoWrap .info2{
+    flex: 4;
+}
+.point_infoWrap{
+    display: flex;
+/*    justify-content: space-between;*/
+}
+.point_infoWrap .info3{
+    flex: 6;
     margin-top: 20px;
 }
-/* 2019 08 20 수정:E */
-
+.point_infoWrap .info4{
+    flex: 4;
+}
+/* 2019 08 26 수정:E */
 
 .tab2{}
 .tab2 h2{
@@ -470,27 +477,25 @@ nav ul li a{
     .content_wrap {
         width: 95%;
     }
-                
     .tab1 .point_box h2 {
         background-position: 140px center;
     }
     .tab1 .hiik_box h2 {
         background-position: 145px center;
     }
+    /* 2019 08 26 수정:S */
     .point_box .point_view {
-        width: 80%;
-        font-size: 17px;
+        width: 90%;
+        font-size: 15px;
     }
     .hiik_box .hiik_view {
-        width: 80%;
+        width: 90%;
     }
-    /* 2019 08 20 수정:S */
+    /* 2019 08 26 수정:E */
     .tab1_info p {
         margin-bottom: 5px;
         font-size: 12px;
-        color: #9adbd9;
     }
-    /* 2019 08 20 수정:E */
 }
 @media screen and (min-width: 780px) and (max-width: 1023px){
     .content_wrap {
@@ -518,17 +523,19 @@ nav ul li a{
         background: url(../img/box_bg_3.png) no-repeat;
         background-position: center center;
     }
+    /* 2019 08 26 수정:S */
     .point_box .point_view {
-        width: 65%;
+        width: 70%;
         font-size: 20px;
         margin-top: 50px;
     }
     .hiik_box .hiik_view {
         width: 55%;
-        margin-top: 20px;
+        margin-top: 40px;
         text-shadow: 2px 2px 2px #000;
         font-size: 16px;
     }
+    /* 2019 08 26 수정:E */
     .hiik_box {
         height: 320px;
         flex: 5;
@@ -541,9 +548,9 @@ nav ul li a{
     .logTab_box ul {
         width: 75%;
     }
-    /* 2019 08 20 수정:S */
+    /* 2019 08 26 수정:S */
     .tab1{
-        height: 1280px;
+        height: 1450px;
     }
     .tab1_info{}
     .hiik_infoWrap {
@@ -552,7 +559,13 @@ nav ul li a{
     .info1{
         margin-bottom: 20px;
     }
-    /* 2019 08 20 수정:E */
+    .point_infoWrap {
+        flex-direction: column;
+    }
+    .info3{
+        margin-bottom: 20px;
+    }
+    /* 2019 08 26 수정:E */
 }
 @media screen and (min-width: 640px) and (max-width: 779px){
     .content_wrap {
@@ -580,17 +593,19 @@ nav ul li a{
         background: url(../img/box_bg_3.png) no-repeat;
         background-position: center center;
     }
+    /* 2019 08 26 수정:S */
     .point_box .point_view {
-        width: 65%;
+        width: 75%;
         font-size: 20px;
         margin-top: 50px;
     }
     .hiik_box .hiik_view {
         width: 75%;
-        margin-top: 20px;
+        margin-top: 40px;
         text-shadow: 2px 2px 2px #000;
         font-size: 16px;
     }
+    /* 2019 08 26 수정:E */
     .hiik_box {
         height: 320px;
         flex: 5;
@@ -635,15 +650,21 @@ nav ul li a{
         height: 30px;
         font-size: 12px;
     }
-    /* 2019 08 20 수정:S */
+    /* 2019 08 26 수정:S */
     .tab1{
-        height: 1300px;
+        height: 1450px;
     }
     .tab1_info{}
     .hiik_infoWrap {
         flex-direction: column;
     }
     .info1{
+        margin-bottom: 20px;
+    }
+    .point_infoWrap {
+        flex-direction: column;
+    }
+    .info3{
         margin-bottom: 20px;
     }
     /* 2019 08 20 수정:E */
@@ -695,12 +716,14 @@ nav ul li a{
         font-size: 17px;
         margin-top: 50px;
     }
+    /* 2019 08 26 수정:S */
     .hiik_box .hiik_view {
-        width: 75%;
-        margin-top: 20px;
+        width: 80%;
+        margin-top: 40px;
         text-shadow: 2px 2px 2px #000;
         font-size: 16px;
     }
+    /* 2019 08 26 수정:E */
     .hiik_box {
         height: 320px;
         flex: 5;
@@ -755,9 +778,9 @@ nav ul li a{
         height: 30px;
         font-size: 12px;
     }
-    /* 2019 08 20 수정:S */
+    /* 2019 08 26 수정:S */
     .tab1{
-        height: 1320px;
+        height: 1450px;
     }
     .hiik_infoWrap {
         flex-direction: column;
@@ -765,7 +788,13 @@ nav ul li a{
     .info1{
         margin-bottom: 20px;
     }
-    /* 2019 08 20 수정:E */
+    .point_infoWrap {
+        flex-direction: column;
+    }
+    .info3{
+        margin-bottom: 20px;
+    }
+    /* 2019 08 26 수정:E */
 }
 @media screen and (max-width: 479px){
     .content_wrap {
@@ -811,8 +840,9 @@ nav ul li a{
         background: url(../img/box_bg_3.png) no-repeat;
         background-position: center center;
     }
+    /* 2019 08 26 수정:S */
     .point_box .point_view {
-        width: 90%;
+        width: 95%;
         font-size: 16px;
         margin-top: 50px;
     }
@@ -821,10 +851,11 @@ nav ul li a{
     }
     .hiik_box .hiik_view {
         width: 90%;
-        margin-top: 20px;
+        margin-top: 40px;
         text-shadow: 2px 2px 2px #000;
         font-size: 15px;
     }
+    /* 2019 08 26 수정:E */
     .hiik_box {
         height: 320px;
         flex: 5;
@@ -893,9 +924,9 @@ nav ul li a{
         height: 30px;
         font-size: 12px;
     }
-    /* 2019 08 20 수정:S */
+    /* 2019 08 26 수정:S */
     .tab1{
-        height: 1340px;
+        height: 1470px;
     }
     .tab1_info{
         padding: 10px 10px;
@@ -909,5 +940,11 @@ nav ul li a{
     .info1{
         margin-bottom: 20px;
     }
-    /* 2019 08 20 수정:E */
+    .point_infoWrap {
+        flex-direction: column;
+    }
+    .info3{
+        margin-bottom: 20px;
+    }
+    /* 2019 08 26 수정:E */
 }
