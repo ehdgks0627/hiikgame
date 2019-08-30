@@ -1,6 +1,9 @@
+/*2019 08 30 수정 :S*/
 .content_wrap{
+    max-width: 1800px !important;
     height: 808px;
 }
+/*2019 08 30 수정 :E*/
 .content_wrap h2{
     padding-top: 80px;
     margin-bottom: 80px;
@@ -18,7 +21,9 @@
     display: flex;
     height: 500px;
     text-align: center;
+    justify-content: space-between;
 }
+/*2019 08 30 수정:S*/
 .room_wrap h3{
     color: #fff;
     width: 200px;
@@ -27,7 +32,7 @@
     position: absolute;
     left: 50%;
     margin-left: -100px;
-    bottom: 130px;
+    bottom: 100px;
     font-size: 14px;
     border-radius: 5px;
     background-image : linear-gradient(360deg, #905206  0%, #d49f37  74%);
@@ -36,69 +41,93 @@
 .room_wrap div{
     border: 2px solid #d49f37;
     position: relative;
+    margin-right: 20px;
+    width: 20%;
 }
 .room_wrap div a{
-/*    height: 100%;*/
     display: block;
 }
-.room_wrap div:nth-of-type(1){
-    flex: 3;
-    margin-right: 80px;
+.room_wrap div.room1{
+    
     background: url(../img/sequence_list01.png) no-repeat;
     background-size: cover;
 }
-.room_wrap div:nth-of-type(1) h3{}
-.room_wrap div:nth-of-type(2){
-    flex: 3;
-    margin-right: 80px;
+
+.room_wrap div.room2{
+   
     background: url(../img/sequence_list02.png) no-repeat;
     background-size: cover;
 }
-.room_wrap div:nth-of-type(2) h3{}
-.room_wrap div:nth-of-type(3){
-    flex: 3;
+
+.room_wrap div.room3{
+    
     background: url(../img/sequence_list03.png) no-repeat;
     background-size: cover;
 }
-.room_wrap div:nth-of-type(3) h3{}
 
+.room_wrap div.room4{
+    
+    background: url(../img/sequence_list04.png) no-repeat;
+    background-size: cover;
+}
 
+.room_wrap div.room5{
+    
+    background: url(../img/sequence_list05.png) no-repeat;
+    background-size: cover;
+    margin-right: 0;
+}
+/*2019 08 30 수정:E*/
 
 
 @media screen and (min-width: 1280px) and (max-width: 1599px){
+    /*2019 08 30 수정:S*/
+    .content_wrap {
+        width: 96% !important;
+    }
     .room_wrap{
         height: 420px;
     }
     .room_wrap h3{
-        width: 200px;
+        width: 160px;
         height: 40px;
         line-height: 40px;
         left: 50%;
-        margin-left: -100px;
-        bottom: 80px;
+        margin-left: -80px;
+        bottom: 60px;
     }
-    .room_wrap div:nth-of-type(1){
-        flex: 3;
-        margin-right: 80px;
-        background: url(../img/sequence_list01.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room1{
+        background-size: 110% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(2){
-        flex: 3;
-        margin-right: 80px;
-        background: url(../img/sequence_list02.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room2{
+        background-size: 110% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(3){
-        flex: 3;
-        background: url(../img/sequence_list03.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room3{
+        background-size: 110% 100%;
+        background-position: center;
     }
+    .room_wrap div.room4{
+        background-size: 110% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room5{
+        background-size: 110% 100%;
+        background-position: center;
+    }
+    /*2019 08 30 수정:E*/
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px){
+    .content_wrap {
+        width: 96% !important;
+        height: 1200px !important;
+    }
     .room_wrap{
-        height: 330px;
-        margin-top: 130px;
+        height: 930px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     .room_wrap h3{
         width: 160px;
@@ -108,36 +137,49 @@
         margin-left: -80px;
         bottom: 40px;
     }
-    .room_wrap div:nth-of-type(1){
-        flex: 3;
-        margin-right: 80px;
-        background: url(../img/sequence_list01.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div{
+        width: 30%;
+        margin-bottom: 50px;
     }
-    .room_wrap div:nth-of-type(2){
-        flex: 3;
-        margin-right: 80px;
-        background: url(../img/sequence_list02.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room1{
+        background-size: 110% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(3){
-        flex: 3;
-        background: url(../img/sequence_list03.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room2{
+        background-size: 110% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room3{
+        background-size: 110% 100%;
+        background-position: center;
+        margin-right: 0;
+    }
+    .room_wrap div.room4{
+        background-size: 110% 100%;
+        background-position: center;
+        margin-bottom: 0;
+    }
+    .room_wrap div.room5{
+        background-size: 110% 100%;
+        background-position: center;
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width: 780px) and (max-width: 1023px){
     .page_wrap{
-        height: 2000px !important;
+        height: 1800px !important;
     }
     .room_wrap{
-        width: 65%;
+        width: 80%;
         margin: 0 auto;
-        height: 1730px;
-        flex-direction: column;
+        height: 1530px;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .room_wrap div{
         margin-bottom: 80px;
+        margin-right: 0;
+        width: 45%;
     }
     .room_wrap h3{
         width: 200px;
@@ -147,36 +189,43 @@
         margin-left: -100px;
         bottom: 80px;
     }
-    .room_wrap div:nth-of-type(1){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list01.png) no-repeat;
+    .room_wrap div.room1{
         background-size: 100% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(2){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list02.png) no-repeat;
+    .room_wrap div.room2{
         background-size: 100% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(3){
-        flex: 10;
-        background: url(../img/sequence_list03.png) no-repeat;
+    .room_wrap div.room3{
         background-size: 100% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room4{
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room5{
+        background-size: 100% 100%;
+        background-position: center;
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width: 640px) and (max-width: 779px){
     .page_wrap{
-        height: 2000px !important;
+        height: 1600px !important;
     }
     .room_wrap{
-        width: 70%;
+        width: 85%;
         margin: 0 auto;
-        height: 1730px;
-        flex-direction: column;
+        height: 1330px;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .room_wrap div{
         margin-bottom: 80px;
+        margin-right: 0;
+        width: 46%;
     }
     .room_wrap h3{
         width: 200px;
@@ -184,29 +233,33 @@
         line-height: 40px;
         left: 50%;
         margin-left: -100px;
-        bottom: 80px;
+        bottom: 50px;
     }
-    .room_wrap div:nth-of-type(1){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list01.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room1{
+        background-size: 110% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(2){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list02.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room2{
+        background-size: 110% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(3){
-        flex: 10;
-        background: url(../img/sequence_list03.png) no-repeat;
-        background-size: 100% 100%;
+    .room_wrap div.room3{
+        background-size: 110% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room4{
+        background-size: 110% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room5{
+        background-size: 110% 100%;
+        background-position: center;
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width: 480px) and (max-width: 639px){
     .page_wrap{
-        height: 2000px !important;
+        height: 2900px !important;
     }
     .content_wrap h2 {
         font-size: 35px;
@@ -214,11 +267,13 @@
     .room_wrap{
         width: 90%;
         margin: 0 auto;
-        height: 1730px;
+        height: 2630px;
         flex-direction: column;
     }
     .room_wrap div{
-        margin-bottom: 80px;
+        width: 344px;
+        margin: 0 auto;
+        margin-bottom: 60px;
     }
     .room_wrap h3{
         width: 200px;
@@ -226,41 +281,52 @@
         line-height: 40px;
         left: 50%;
         margin-left: -100px;
-        bottom: 80px;
+        bottom: 70px;
     }
-    .room_wrap div:nth-of-type(1){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list01.png) no-repeat;
+    .room_wrap div.room1{
+        flex: 2;
         background-size: 100% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(2){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list02.png) no-repeat;
+    .room_wrap div.room2{
+        flex: 2;
         background-size: 100% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(3){
-        flex: 10;
-        background: url(../img/sequence_list03.png) no-repeat;
+    .room_wrap div.room3{
+        flex: 2;
         background-size: 100% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room4{
+        flex: 2;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room5{
+        flex: 2;
+        background-size: 100% 100%;
+        background-position: center;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width: 479px){
     .page_wrap{
-        height: 1650px !important;
+        height: 2900px !important;
     }
     .content_wrap h2 {
-        font-size: 28px;
+        font-size: 35px;
     }
     .room_wrap{
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
-        height: 1430px;
+        height: 2630px;
         flex-direction: column;
     }
     .room_wrap div{
-        margin-bottom: 80px;
+        width: 344px;
+        margin: 0 auto;
+        margin-bottom: 60px;
     }
     .room_wrap h3{
         width: 200px;
@@ -268,24 +334,33 @@
         line-height: 40px;
         left: 50%;
         margin-left: -100px;
-        bottom: 80px;
+        bottom: 60px;
     }
-    .room_wrap div:nth-of-type(1){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list01.png) no-repeat;
+    .room_wrap div.room1{
+        flex: 2;
         background-size: 100% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(2){
-        flex: 10;
-        margin-right: 0;
-        background: url(../img/sequence_list02.png) no-repeat;
+    .room_wrap div.room2{
+        flex: 2;
         background-size: 100% 100%;
+        background-position: center;
     }
-    .room_wrap div:nth-of-type(3){
-        flex: 10;
-        background: url(../img/sequence_list03.png) no-repeat;
+    .room_wrap div.room3{
+        flex: 2;
         background-size: 100% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room4{
+        flex: 2;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    .room_wrap div.room5{
+        flex: 2;
+        background-size: 100% 100%;
+        background-position: center;
+        margin: 0 auto;
     }
 }
 
