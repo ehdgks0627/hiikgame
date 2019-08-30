@@ -1,0 +1,292 @@
+.content_wrap{
+    height: 808px;
+}
+.content_wrap h2{
+    padding-top: 80px;
+    margin-bottom: 80px;
+    font-size: 40px;
+    text-align: center;
+    background: linear-gradient(to right, #988870, #eccb91, #ee9a07 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+/*
+    color: #d49f37;
+    text-shadow: -1px -1px 0px #d49f37, 2px 2px 0px #d49f37, 4px 4px 4px #d49f37;
+*/
+}
+.room_wrap{
+    display: flex;
+    height: 500px;
+    text-align: center;
+}
+.room_wrap h3{
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 130px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-image : linear-gradient(360deg, #905206  0%, #d49f37  74%);
+    box-shadow: 1px 3px 9px 3px rgba(140, 141, 143,.35);
+}
+.room_wrap div{
+    border: 2px solid #d49f37;
+    position: relative;
+}
+.room_wrap div a{
+/*    height: 100%;*/
+    display: block;
+}
+.room_wrap div:nth-of-type(1){
+    flex: 3;
+    margin-right: 80px;
+    background: url(../img/sequence_list01.png) no-repeat;
+    background-size: cover;
+}
+.room_wrap div:nth-of-type(1) h3{}
+.room_wrap div:nth-of-type(2){
+    flex: 3;
+    margin-right: 80px;
+    background: url(../img/sequence_list02.png) no-repeat;
+    background-size: cover;
+}
+.room_wrap div:nth-of-type(2) h3{}
+.room_wrap div:nth-of-type(3){
+    flex: 3;
+    background: url(../img/sequence_list03.png) no-repeat;
+    background-size: cover;
+}
+.room_wrap div:nth-of-type(3) h3{}
+
+
+
+
+@media screen and (min-width: 1280px) and (max-width: 1599px){
+    .room_wrap{
+        height: 420px;
+    }
+    .room_wrap h3{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 80px;
+    }
+    .room_wrap div:nth-of-type(1){
+        flex: 3;
+        margin-right: 80px;
+        background: url(../img/sequence_list01.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(2){
+        flex: 3;
+        margin-right: 80px;
+        background: url(../img/sequence_list02.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(3){
+        flex: 3;
+        background: url(../img/sequence_list03.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    .room_wrap{
+        height: 330px;
+        margin-top: 130px;
+    }
+    .room_wrap h3{
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        left: 50%;
+        margin-left: -80px;
+        bottom: 40px;
+    }
+    .room_wrap div:nth-of-type(1){
+        flex: 3;
+        margin-right: 80px;
+        background: url(../img/sequence_list01.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(2){
+        flex: 3;
+        margin-right: 80px;
+        background: url(../img/sequence_list02.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(3){
+        flex: 3;
+        background: url(../img/sequence_list03.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width: 780px) and (max-width: 1023px){
+    .page_wrap{
+        height: 2000px !important;
+    }
+    .room_wrap{
+        width: 65%;
+        margin: 0 auto;
+        height: 1730px;
+        flex-direction: column;
+    }
+    .room_wrap div{
+        margin-bottom: 80px;
+    }
+    .room_wrap h3{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 80px;
+    }
+    .room_wrap div:nth-of-type(1){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list01.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(2){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list02.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(3){
+        flex: 10;
+        background: url(../img/sequence_list03.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 779px){
+    .page_wrap{
+        height: 2000px !important;
+    }
+    .room_wrap{
+        width: 70%;
+        margin: 0 auto;
+        height: 1730px;
+        flex-direction: column;
+    }
+    .room_wrap div{
+        margin-bottom: 80px;
+    }
+    .room_wrap h3{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 80px;
+    }
+    .room_wrap div:nth-of-type(1){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list01.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(2){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list02.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(3){
+        flex: 10;
+        background: url(../img/sequence_list03.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 639px){
+    .page_wrap{
+        height: 2000px !important;
+    }
+    .content_wrap h2 {
+        font-size: 35px;
+    }
+    .room_wrap{
+        width: 90%;
+        margin: 0 auto;
+        height: 1730px;
+        flex-direction: column;
+    }
+    .room_wrap div{
+        margin-bottom: 80px;
+    }
+    .room_wrap h3{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 80px;
+    }
+    .room_wrap div:nth-of-type(1){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list01.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(2){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list02.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(3){
+        flex: 10;
+        background: url(../img/sequence_list03.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (max-width: 479px){
+    .page_wrap{
+        height: 1650px !important;
+    }
+    .content_wrap h2 {
+        font-size: 28px;
+    }
+    .room_wrap{
+        width: 95%;
+        margin: 0 auto;
+        height: 1430px;
+        flex-direction: column;
+    }
+    .room_wrap div{
+        margin-bottom: 80px;
+    }
+    .room_wrap h3{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 80px;
+    }
+    .room_wrap div:nth-of-type(1){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list01.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(2){
+        flex: 10;
+        margin-right: 0;
+        background: url(../img/sequence_list02.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .room_wrap div:nth-of-type(3){
+        flex: 10;
+        background: url(../img/sequence_list03.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+
